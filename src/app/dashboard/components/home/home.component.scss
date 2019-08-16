@@ -1,0 +1,43 @@
+.fluid-container {
+  background-image: url("../../../../assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 550px;
+}
+    img {
+      padding: 10px;
+      height: 75px;
+      width: 75px;
+    }
+  .header {
+    float: left;
+  }
+  .nav {
+    float: right;
+    padding-top: 15px;
+    padding-right: 50px;
+    ul {
+      list-style-type: none;
+    }
+    li {
+      display: inline;
+      padding: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: slategray;
+    }
+  }
+
+  .mainbody {
+    padding-top: 250px;
+    padding-left: 90px;
+    color: white;
+
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      border-radius: 40px;
+    }
+  }
