@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { CommonUtils } from '../../../shared/utils/common.utils';
-import { ValidatorsUtils } from '../../../shared/utils/validators';
-import { RegisterationController } from '../../../controller/registeration.controller';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {CommonUtils} from '../../../shared/utils/common.utils';
+import {ValidatorsUtils} from '../../../shared/utils/validators';
+import {RegisterationController} from '../../../controller/registeration.controller';
 
 @Component({
   selector: 'app-register',
@@ -25,6 +25,7 @@ export class RegisterComponent implements OnInit {
   genders: string[];
   sports: string[];
   residences: string[];
+  selectedSports: string[] = [];
 
   CommonUtil = CommonUtils;
 
@@ -64,7 +65,39 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    this.registrationController.register(this.formGroup.value);
+    console.log('1', this.formGroup.value);
+
+    delete this.formGroup.value['sport'];
+
+    console.log('2', this.formGroup.value);
+
+    const value = {
+      ...this.formGroup.value,
+      sport: this.selectedSports
+    };
+    this.registrationController.register(value);
   }
+
+  removeSports(sport: string) {
+    if (!sport) {
+      return;
+    }
+    const index = this.selectedSports.indexOf(sport);
+    if (index >= 0) {
+      this.selectedSports.splice(index, 1);
+    }
+  }
+
+  addSports(sport: string) {
+    if (!sport) {
+      return;
+    }
+    if (this.selectedSports.indexOf(sport) >= 0) {
+      return;
+    }
+    console.log(sport);
+    this.selectedSports.push(sport);
+  }
+
 
 }
