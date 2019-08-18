@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {CommonUtils} from '../../../shared/utils/common.utils';
-import {ValidatorsUtils} from '../../../shared/utils/validators';
-import {RegisterationController} from '../../../controller/registeration.controller';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CommonUtils } from '../../../shared/utils/common.utils';
+import { ValidatorsUtils } from '../../../shared/utils/validators';
+import { RegisterationController } from '../../../controller/registeration.controller';
 
 @Component({
   selector: 'app-register',
@@ -26,7 +26,9 @@ export class RegisterComponent implements OnInit {
   sports: string[];
   residences: string[];
 
-  constructor(private resgisterationController: RegisterationController
+  CommonUtil = CommonUtils;
+
+  constructor(private registrationController: RegisterationController
   ) {
     this.branches = CommonUtils.getBranches();
     this.years = CommonUtils.getYear();
@@ -62,7 +64,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    this.resgisterationController.register(this.formGroup.value);
+    this.registrationController.register(this.formGroup.value);
   }
 
 }

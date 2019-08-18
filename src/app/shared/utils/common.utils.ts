@@ -1,8 +1,8 @@
-import {IBranch} from '../model/IBranch';
-import {ISportCategory} from '../model/sports';
-import {IGender} from '../model/gender';
-import {IResidence} from '../model/residence';
-import {IYear} from '../model/year';
+import { IBranch } from '../model/branch';
+import { ISportCategory } from '../model/sports';
+import { IGender } from '../model/gender';
+import { IResidence } from '../model/residence';
+import { IYear } from '../model/year';
 
 export class CommonUtils {
   static getBranches() {
@@ -28,5 +28,124 @@ export class CommonUtils {
   static getEnumKeys<T>(enumRef: any
   ): T[] {
     return Object.keys(enumRef).map(key => enumRef[key]);
+  }
+
+  static getBranchTitle(branch: IBranch) {
+    let branchTitle;
+    switch (branch) {
+      case IBranch.CE:
+        branchTitle = 'Civil';
+        break;
+      case IBranch.CS:
+        branchTitle = 'Computer Science';
+        break;
+      case IBranch.ME:
+        branchTitle = 'Mechanical';
+        break;
+      case IBranch.EN:
+        branchTitle = 'Electrical and Electronics';
+        break;
+      case IBranch.EC:
+        branchTitle = 'Electronics and Communication';
+        break;
+      case IBranch.EI:
+        branchTitle = 'Electronics and Instrumentation';
+        break;
+      case IBranch.IT:
+        branchTitle = 'Information Technology';
+        break;
+      case IBranch.MBA:
+        branchTitle = 'MBA';
+        break;
+      case IBranch.MCA:
+        branchTitle = 'MCA';
+        break;
+      default:
+        branchTitle = '';
+    }
+    return branchTitle;
+  }
+
+  static getGenderTitle(gender: IGender) {
+    let genderTitle;
+    switch (gender) {
+      case IGender.MALE:
+        genderTitle = 'Male';
+        break;
+      case IGender.FEMALE:
+        genderTitle = 'Female';
+        break;
+      default:
+        genderTitle = '';
+    }
+    return genderTitle;
+  }
+  static getResidenceTitle(residence: IResidence) {
+    let residenceTitle;
+    switch (residence) {
+      case IResidence.DAY_SCHOLAR:
+        residenceTitle = 'Day Scholar';
+        break;
+      case IResidence.HOSTELER:
+        residenceTitle = 'Hosteler';
+        break;
+      default:
+        residenceTitle = '';
+    }
+    return residenceTitle;
+  }
+
+  static getSportsTitle(sport: ISportCategory) {
+    let sportTitle;
+    switch (sport) {
+      case ISportCategory.ATHLETICS:
+        sportTitle = 'Athletics';
+        break;
+      case ISportCategory.BADMINTON:
+        sportTitle = 'Badminton';
+        break;
+      case ISportCategory.BASKETBALL:
+        sportTitle = 'Basketball';
+        break;
+      case ISportCategory.CAROM:
+        sportTitle = 'Carom';
+        break;
+      case ISportCategory.CHESS:
+        sportTitle = 'Chess';
+        break;
+      case ISportCategory.CRICKET:
+        sportTitle = 'Cricket';
+        break;
+      case ISportCategory.FOOTBALL:
+        sportTitle = 'Football';
+        break;
+      case ISportCategory.KABADDI:
+        sportTitle = 'Kabaddi';
+        break;
+      case ISportCategory.KHO_KHO:
+        sportTitle = 'Kho kho';
+        break;
+      case ISportCategory.OBSTACLE_RACE:
+        sportTitle = 'Obstacle Race';
+        break;
+      case ISportCategory.POOL:
+        sportTitle = 'Pool';
+        break;
+      case ISportCategory.POWER_LIFTING:
+        sportTitle = 'Power lifting';
+        break;
+      case ISportCategory.TABLE_TENNIS:
+        sportTitle = 'Table tennis';
+        break;
+      case ISportCategory.TUG_OF_WAR:
+        sportTitle = 'Tug of war';
+        break;
+      case ISportCategory.VOLLEYBALL:
+        sportTitle = 'Volleyball';
+        break;
+      default:
+        sportTitle = '';
+    }
+    return sportTitle;
   }
 }
