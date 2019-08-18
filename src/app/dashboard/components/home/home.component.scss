@@ -1,9 +1,9 @@
-.fluid-container {
+.main{
   background-image: url("../../../../assets/bg.jpg");
   background-size: cover;
+  padding-bottom: 10vh;
+  background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 600px;
 }
     img {
       padding: 10px;
@@ -31,8 +31,8 @@
   }
 
   .mainbody {
-    padding-top: 250px;
-    padding-left: 90px;
+    padding-top: 15%;
+    padding-left: 10%;
     color: white;
 
     button {
@@ -41,13 +41,39 @@
       border-radius: 40px;
     }
   }
+@media(max-width:767px){
+  .mainbody{
+    padding-top: 95%;
+  }
+  .schedule-body-header {
+    padding-left: 5%;
+  }
+  .overview-header {
+    padding-top: 15%;
+  }
+  .overview{
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+  .overview_matches{
+    padding-top: 1%;
+    padding-bottom: 5%;
+  }
 
+  .overview-vertical {
+    display: none;
+  }
+  .team-member img{
+    width:8rem !important;
+    height:8rem !important;
+    left: 16% !important;
+  }
+}
   .schedule {
     background-color: gainsboro;
-    width: 100%;
-    height: 600px;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
   }
 
   .schedule-body {
@@ -55,24 +81,30 @@
   }
 
   .schedule-header {
-    font-family: "fantasy";
-    text-align: center;
-    padding-top: 50px;
+   font-family: "fantasy";
+   padding-top: 50px;
+    padding-bottom: 4vh;
   }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 25%;
-  margin: 30px 30px;
-  display: inline-block;
-  padding: 30px;
+  padding-top: 4vh;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.col-left {
+  float: left;
+  padding-left: 13%;
+}
+
+.col-right {
+  float: right;
+  padding-right: 13%;
+}
 .schedule-body .vertical {
   border-left: 6px solid green;
   height: 50px;
@@ -84,34 +116,30 @@
 .overview {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../../../assets/sports.jpg');
   background-size: cover;
-  width: 100%;
-  height: 600px;
+  color: white;
+  padding-top:5%;
+  padding-bottom: 5%;
+}
+.overview_matches{
+  padding-bottom: 10%;
+  padding-top: 5vh;
 }
 
 .overview-header {
-  padding-top: 200px;
-  text-align: center;
-  color: white;
-}
-
-.overview-body {
-  color: white;
-  padding-left: 200px;
-  padding-top: 100px;
-  display: inline-block;
+  padding-bottom: 5%;
 }
 
 .overview-vertical {
-  border-left: 6px solid green;
-  height: 50px;
+  border-left: 5px solid white;
+  height: 80px;
   position:absolute;
-  left: 25%;
+  //left: 25%;
 }
 
 .team {
   color: white;
   background-color: gainsboro;
-  width: 80%;
+  //width: 80%;
   //height: 800px;
   padding-left: 70px;
   padding-right: 70px;
@@ -148,7 +176,7 @@
   z-index: 2;
   border: 3px solid white;
   border-radius: 50%;
-  left: 13%;
+  left: 25%;
 }
 
 .team-image {
@@ -204,4 +232,9 @@
 .footer {
   color: white;
   padding: 1%;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
 }
