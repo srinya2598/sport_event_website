@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './dashboard/components/home/home.component';
 import {RegisterComponent} from './dashboard/components/register/register.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule, MatFormFieldModule, MatIconModule} from '@angular/material';
+import {MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,10 @@ import {MatCardModule, MatFormFieldModule, MatIconModule} from '@angular/materia
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
