@@ -17,7 +17,13 @@ export class RegisterationController {
       console.log('user data no available');
       return;
     }
-    this.httpService.post('/register', userData).subscribe();
+    this.httpService.post('/register', userData).subscribe((res) => {
+        console.log('success', res);
+
+      },
+      (error) => {
+        console.log('fail', error);
+      });
     console.log(userData);
   }
 }

@@ -4,51 +4,66 @@
       <div class="row">
         <div class="col-md-6"></div>
         <div class="col-md-6">
-    <div class="form">
-    <form [formGroup]="formGroup" (ngSubmit)="formGroup.valid&&register()" autocomplete="off">
-      <mat-form-field>
-        <input matInput placeholder="Name" formControlName="name" autocomplete="false">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Contact Number" formControlName="contact_number" >
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Student Number" formControlName="student_number" >
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Email" formControlName="email" >
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select matInput placeholder="Branch" formControlName="branch" >
-          <mat-option *ngFor="let branch of branches" [value]="branch">{{CommonUtil.getBranchTitle(branch)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select matInput placeholder="Year" formControlName="year">
-          <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select matInput placeholder="Gender" formControlName="gender">
-          <mat-option *ngFor="let gender of genders" [value]="gender">{{CommonUtil.getGenderTitle(gender)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select matInput placeholder="Sports" formControlName="sport">
-          <mat-option *ngFor="let sport of sports" [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
-        </mat-select>
-      </mat-form-field>
+          <div class="form">
+            <form [formGroup]="formGroup" (ngSubmit)="formGroup.valid&&register()" autocomplete="off">
+              <mat-form-field>
+                <input matInput placeholder="Name" formControlName="name" autocomplete="false">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Contact Number" formControlName="contact_number">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Student Number" formControlName="student_number">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Email" formControlName="email">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-select matInput placeholder="Branch" formControlName="branch">
+                  <mat-option *ngFor="let branch of branches"
+                              [value]="branch">{{CommonUtil.getBranchTitle(branch)}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-select matInput placeholder="Year" formControlName="year">
+                  <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-select matInput placeholder="Gender" formControlName="gender">
+                  <mat-option *ngFor="let gender of genders"
+                              [value]="gender">{{CommonUtil.getGenderTitle(gender)}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-chip-list #chipList>
+                  <mat-chip *ngFor="let sport of selectedSports" [selectable]="true" [removable]="true"
+                            (removed)="removeSports(sport) ">{{sport}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="Sports" formControlName="sport" [matAutocomplete]="auto"
+                         [matChipInputFor]="chipList" >
+                </mat-chip-list>
+                <mat-autocomplete #auto ="matAutocomplete" (optionSelected)="addSports($event.option.value)">
+                  <mat-option *ngFor="let sport of sports" [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
+                </mat-autocomplete>
+                <!-- <mat-select matInput placeholder="Sports" formControlName="sport"
+                             (selectionChange)="addSports($event.value)">
+                 <mat-option *ngFor="let sport of sports"
+                             [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
+                 </mat-select>-->
+              </mat-form-field>
+              <mat-form-field>
+                <mat-select matInput placeholder="Residence" formControlName="residence">
+                  <mat-option *ngFor="let residence of residences" [value]="residence">{{residence}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <button type="submit" class="register">Register</button>
 
-      <mat-form-field>
-        <mat-select matInput placeholder="Residence" formControlName="residence">
-          <mat-option *ngFor="let residence of residences" [value]="residence">{{residence}}</mat-option>
-
-        </mat-select>
-      </mat-form-field>
-      <button type="submit" class="register">Register</button>
-
-    </form></div>
+            </form>
+          </div>
         </div>
-      </div></div>
+      </div>
+    </div>
   </mat-card-content>
 </mat-card>
