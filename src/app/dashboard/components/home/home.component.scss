@@ -73,7 +73,7 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.vertical {
+.schedule-body .vertical {
   border-left: 6px solid green;
   height: 50px;
   position:absolute;
@@ -106,6 +106,102 @@
   height: 50px;
   position:absolute;
   left: 25%;
+}
 
-  //display: inline-block;
+.team {
+  color: white;
+  background-color: gainsboro;
+  width: 80%;
+  //height: 800px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.team-header {
+  //font-family: "fantasy";
+  text-align: center;
+  padding-top: 50px;
+}
+
+.team-member {
+  //padding: 50px;
+}
+
+.team-card {
+  position: relative;
+  top: -5em;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  color: black;
+  padding-top: 35%;
+  padding-bottom: 20%;
+}
+
+.team-member img {
+  height: 11rem;
+  width: 11rem;
+  position: relative;
+  z-index: 2;
+  border: 3px solid white;
+  border-radius: 50%;
+  left: 13%;
+}
+
+.team-image {
+ // padding-top: 10%;
+  position: relative;
+}
+
+.team-hr{
+  width: 80%;
+  border-top: 2px solid black;
+}
+
+.details {
+  color: white;
+  text-align: left;
+  padding: 7%;
+}
+
+.details .vertical {
+    border-left: 4px solid white;
+    height: 12%;
+    position:absolute;
+    left: 6%;
+}
+
+.details p {
+  padding-top: 4%;
+}
+
+.contact {
+  color: white;
+  text-align: right;
+  padding: 7%;
+}
+
+.contact .vertical {
+  border-right: 4px solid white;
+  height: 12%;
+  position:absolute;
+  //float: right;
+  right: 6%;
+}
+
+.contact p {
+  padding-top: 4%;
+}
+
+.contact-hr{
+  width: 80%;
+  border-top: 2px solid white;
+}
+
+.footer {
+  color: white;
+  padding: 1%;
 }
