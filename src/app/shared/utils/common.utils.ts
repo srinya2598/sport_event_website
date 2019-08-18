@@ -1,57 +1,32 @@
+import {IBranch} from '../model/IBranch';
+import {ISportCategory} from '../model/sports';
+import {IGender} from '../model/gender';
+import {IResidence} from '../model/residence';
+import {IYear} from '../model/year';
+
 export class CommonUtils {
   static getBranches() {
-    return [
-      'ME',
-      'CS',
-      'CE',
-      'IT',
-      'EI',
-      'EN',
-      'EC',
-      'MBA',
-      'MCA'
-    ];
+    return this.getEnumKeys<IBranch>(IBranch);
   }
 
   static getSports() {
-    return [
-      'Cricket',
-      'Football',
-      'Badminton',
-      'Athletics',
-      'Kabaddi',
-      'Pool',
-      'Power Lifting',
-      'Volleyball',
-      'Basketball',
-      'Table Tennis',
-      'Kho-Kho',
-      'Tug of War',
-      'Chess',
-      'Carrom',
-      'Obsatacle Race',
-    ];
+    return this.getEnumKeys<ISportCategory>(ISportCategory);
   }
 
   static getGender() {
-    return [
-      'Male',
-      'Female'
-    ];
+    return this.getEnumKeys<IGender>(IGender);
   }
 
   static getYear() {
-    return [
-      '1',
-      '2',
-      '3',
-      '4'
-    ];
+    return this.getEnumKeys<IYear>(IYear);
   }
-  static getResidence(){
-    return[
-      'Hosteler',
-      'Day Scholar'
-    ];
+
+  static getResidence() {
+    return this.getEnumKeys<IResidence>(IResidence);
+  }
+
+  static getEnumKeys<T>(enumRef: any
+  ): T[] {
+    return Object.keys(enumRef).map(key => enumRef[key]);
   }
 }
