@@ -4,6 +4,9 @@ import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {IUser} from './shared/model/user';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class HttpService {
   private readonly BASE_URL = environment.baseUrl;
 

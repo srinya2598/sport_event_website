@@ -14,8 +14,10 @@ export class RegisterationController {
 
   register(userData) {
     if (!userData) {
+      console.log('user data no available');
       return;
     }
-    this.httpService.post('/register', userData);
+    this.httpService.post('/register', userData).subscribe();
+    console.log(userData);
   }
 }

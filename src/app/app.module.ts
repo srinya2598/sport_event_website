@@ -7,6 +7,8 @@ import {HomeComponent} from './dashboard/components/home/home.component';
 import {RegisterComponent} from './dashboard/components/register/register.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule} from '@angular/material';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import {MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSel
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],
