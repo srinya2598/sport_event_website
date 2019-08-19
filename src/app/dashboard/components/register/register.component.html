@@ -47,15 +47,10 @@
                 <mat-autocomplete #auto ="matAutocomplete" (optionSelected)="addSports($event.option.value)">
                   <mat-option *ngFor="let sport of sports" [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
                 </mat-autocomplete>
-                <!-- <mat-select matInput placeholder="Sports" formControlName="sport"
-                             (selectionChange)="addSports($event.value)">
-                 <mat-option *ngFor="let sport of sports"
-                             [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
-                 </mat-select>-->
-              </mat-form-field>
+               </mat-form-field>
               <mat-form-field>
                 <mat-select matInput placeholder="Residence" formControlName="residence">
-                  <mat-option *ngFor="let residence of residences" [value]="residence">{{residence}}</mat-option>
+                  <mat-option *ngFor="let residence of residences" [value]="residence">{{CommonUtil.getResidenceTitle(residence)}}</mat-option>
                 </mat-select>
               </mat-form-field>
               <button type="submit" class="register">Register</button>

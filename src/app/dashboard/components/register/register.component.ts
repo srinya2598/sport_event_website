@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
 
   CommonUtil = CommonUtils;
 
-  constructor(private registrationController: RegisterationController
+  constructor(private registrationController: RegisterationController,
   ) {
     this.branches = CommonUtils.getBranches();
     this.years = CommonUtils.getYear();
@@ -73,9 +73,12 @@ export class RegisterComponent implements OnInit {
 
     const value = {
       ...this.formGroup.value,
-      sport: this.selectedSports
+      sports: this.selectedSports
     };
     this.registrationController.register(value);
+    this.selectedSports = [];
+    this.formGroup.reset();
+    this.formGroup.markAsPristine();
   }
 
   removeSports(sport: string) {

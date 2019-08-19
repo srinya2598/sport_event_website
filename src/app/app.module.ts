@@ -13,7 +13,7 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
-  MatSelectModule
+  MatSelectModule, MatSnackBarModule
 } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -36,7 +36,8 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     MatChipsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
