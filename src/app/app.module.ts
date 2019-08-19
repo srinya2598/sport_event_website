@@ -17,6 +17,7 @@ import {
 } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {NgxCaptchaModule} from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     MatChipsModule,
     MatAutocompleteModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxCaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CommonUtils} from '../../../shared/utils/common.utils';
 import {ValidatorsUtils} from '../../../shared/utils/validators';
 import {RegisterationController} from '../../../controller/registeration.controller';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-register',
@@ -26,6 +27,7 @@ export class RegisterComponent implements OnInit {
   sports: string[];
   residences: string[];
   selectedSports: string[] = [];
+  recaptcha: FormControl;
 
   CommonUtil = CommonUtils;
 
@@ -49,6 +51,7 @@ export class RegisterComponent implements OnInit {
     this.gender = new FormControl(null, [Validators.required]);
     this.sport = new FormControl(null, [Validators.required]);
     this.residence = new FormControl(null, [Validators.required]);
+    this.recaptcha = new FormControl(null, [Validators.required]);
     this.formGroup = new FormGroup({
       'name': this.name,
       'contact_number': this.contact_number,
@@ -58,7 +61,8 @@ export class RegisterComponent implements OnInit {
       'year': this.year,
       'gender': this.gender,
       'sport': this.sport,
-      'residence': this.residence
+      'residence': this.residence,
+      'recaptcha': this.recaptcha
     });
 
 
@@ -102,5 +106,19 @@ export class RegisterComponent implements OnInit {
     this.selectedSports.push(sport);
   }
 
+  handleReset() {
+    console.log('Reset');
+  }
 
+  handleExpire() {
+    console.log('Expire');
+  }
+
+  handleLoad() {
+    console.log('Load');
+  }
+
+  handleSuccess(event) {
+    console.log('Success', event);
+  }
 }
