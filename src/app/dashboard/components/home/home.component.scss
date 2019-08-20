@@ -1,48 +1,52 @@
-.main{
+.main {
   background-image: url("../../../../assets/bg.jpg");
   background-size: cover;
   padding-bottom: 10vh;
   background-position: center;
   background-repeat: no-repeat;
 }
-    img {
-      padding: 10px;
-      height: 75px;
-      width: 75px;
-    }
-  .header {
-    float: left;
-  }
-  .nav {
-    float: right;
-    padding-top: 15px;
-    padding-right: 50px;
-    ul {
-      list-style-type: none;
-    }
-    li {
-      display: inline;
-      padding: 20px;
-    }
-    a {
-      text-decoration: none;
-      color: slategray;
-    }
-  }
 
+img {
+  padding: 10px;
+  height: 75px;
+  width: 75px;
+}
+
+.header {
+  float: left;
+}
+
+.nav {
+  float: right;
+  padding-top: 15px;
+  padding-right: 50px;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline;
+    padding: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: slategray;
+  }
+}
+
+.mainbody {
+  padding-top: 15%;
+  padding-left: 10%;
+  color: white;
+
+  button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 40px;
+  }
+}
+
+@media(max-width: 767px) {
   .mainbody {
-    padding-top: 15%;
-    padding-left: 10%;
-    color: white;
-
-    button {
-      margin-top: 20px;
-      padding: 10px 25px;
-      border-radius: 40px;
-    }
-  }
-@media(max-width:767px){
-  .mainbody{
     padding-top: 95%;
   }
   .schedule-body-header {
@@ -51,11 +55,11 @@
   .overview-header {
     padding-top: 15%;
   }
-  .overview{
+  .overview {
     padding-top: 10%;
     padding-bottom: 20%;
   }
-  .overview_matches{
+  .overview_matches {
     padding-top: 1%;
     padding-bottom: 5%;
   }
@@ -63,37 +67,33 @@
   .overview-vertical {
     display: none;
   }
-  .team-member img{
-    width:8rem !important;
-    height:8rem !important;
-    left: 16% !important;
-  }
 }
-  .schedule {
-    background-color: gainsboro;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 2%;
-  }
 
-  .schedule-body {
-    margin-top: 50px;
-  }
+.schedule {
+  background-color: gainsboro;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+}
 
-  .schedule-header {
-   font-family: "fantasy";
-   padding-top: 50px;
-    padding-bottom: 4vh;
-  }
+.schedule-body {
+  margin-top: 50px;
+}
+
+.schedule-header {
+  font-family: "fantasy";
+  padding-top: 50px;
+  padding-bottom: 4vh;
+}
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding-top: 4vh;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .col-left {
@@ -105,22 +105,23 @@
   float: right;
   padding-right: 13%;
 }
+
 .schedule-body .vertical {
   border-left: 6px solid green;
   height: 50px;
-  position:absolute;
+  position: absolute;
   left: 4%;
 }
 
-
 .overview {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../../../assets/sports.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../../assets/sports.jpg');
   background-size: cover;
   color: white;
-  padding-top:5%;
+  padding-top: 5%;
   padding-bottom: 5%;
 }
-.overview_matches{
+
+.overview_matches {
   padding-bottom: 10%;
   padding-top: 5vh;
 }
@@ -132,61 +133,8 @@
 .overview-vertical {
   border-left: 5px solid white;
   height: 80px;
-  position:absolute;
+  position: absolute;
   //left: 25%;
-}
-
-.team {
-  color: white;
-  background-color: gainsboro;
-  //width: 80%;
-  //height: 800px;
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
-.team-header {
-  //font-family: "fantasy";
-  text-align: center;
-  padding-top: 50px;
-}
-
-.team-member {
-  //padding: 50px;
-}
-
-.team-card {
-  position: relative;
-  top: -5em;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  color: black;
-  padding-top: 35%;
-  padding-bottom: 20%;
-}
-
-.team-member img {
-  height: 11rem;
-  width: 11rem;
-  position: relative;
-  z-index: 2;
-  border: 3px solid white;
-  border-radius: 50%;
-  left: 25%;
-}
-
-.team-image {
- // padding-top: 10%;
-  position: relative;
-}
-
-.team-hr{
-  width: 80%;
-  border-top: 2px solid black;
 }
 
 .details {
@@ -196,10 +144,10 @@
 }
 
 .details .vertical {
-    border-left: 4px solid white;
-    height: 12%;
-    position:absolute;
-    left: 6%;
+  border-left: 4px solid white;
+  height: 12%;
+  position: absolute;
+  left: 6%;
 }
 
 .details p {
@@ -215,7 +163,7 @@
 .contact .vertical {
   border-right: 4px solid white;
   height: 12%;
-  position:absolute;
+  position: absolute;
   //float: right;
   right: 6%;
 }
@@ -224,7 +172,7 @@
   padding-top: 4%;
 }
 
-.contact-hr{
+.contact-hr {
   width: 80%;
   border-top: 2px solid white;
 }

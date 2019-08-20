@@ -1,4 +1,10 @@
 <mat-card>
+  <mat-card-header>
+    <div class="header">
+      <h2 class="header__name"><i>SAKSHAM</i></h2>
+      <h2 class="header__year"><i>2019</i></h2>
+    </div>
+  </mat-card-header>
   <mat-card-content>
     <div class="container">
       <div class="row">
@@ -6,36 +12,38 @@
         <div class="col-md-6">
           <div class="form">
             <form [formGroup]="formGroup" (ngSubmit)="formGroup.valid&&register()" autocomplete="off">
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <input matInput placeholder="Name" formControlName="name" autocomplete="false">
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <input matInput placeholder="Contact Number" formControlName="contact_number">
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <input matInput placeholder="Student Number" formControlName="student_number">
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <input matInput placeholder="Email" formControlName="email">
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <mat-select matInput placeholder="Branch" formControlName="branch">
                   <mat-option *ngFor="let branch of branches"
-                              [value]="branch">{{CommonUtil.getBranchTitle(branch)}}</mat-option>
+                              [value]="branch">{{CommonUtil.getBranchTitle(branch)}}
+                  </mat-option>
                 </mat-select>
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <mat-select matInput placeholder="Year" formControlName="year">
                   <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
                 </mat-select>
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <mat-select matInput placeholder="Gender" formControlName="gender">
                   <mat-option *ngFor="let gender of genders"
-                              [value]="gender">{{CommonUtil.getGenderTitle(gender)}}</mat-option>
+                              [value]="gender">{{CommonUtil.getGenderTitle(gender)}}
+                  </mat-option>
                 </mat-select>
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <mat-chip-list #chipList>
                   <mat-chip *ngFor="let sport of selectedSports" [selectable]="true" [removable]="true"
                             (removed)="removeSports(sport) ">{{sport}}
@@ -46,25 +54,30 @@
                 </mat-chip-list>
                 <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSports($event.option.value)">
                   <mat-option *ngFor="let sport of sports"
-                              [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
+                              [value]="sport">{{CommonUtil.getSportsTitle(sport)}}
+                  </mat-option>
                 </mat-autocomplete>
               </mat-form-field>
-              <mat-form-field>
+              <mat-form-field appearance="outline">
                 <mat-select matInput placeholder="Residence" formControlName="residence">
                   <mat-option *ngFor="let residence of residences"
-                              [value]="residence">{{CommonUtil.getResidenceTitle(residence)}}</mat-option>
+                              [value]="residence">{{CommonUtil.getResidenceTitle(residence)}}
+                  </mat-option>
                 </mat-select>
               </mat-form-field>
-              <ngx-recaptcha2 style="text-align: center" #captchaElem
-                              [siteKey]="'6Le36LEUAAAAAA_itvYU03ORY9mEYmoaeKEksxCH'"
-                              (reset)="handleReset()"
-                              (expire)="handleExpire()"
-                              (load)="handleLoad()"
-                              (success)="handleSuccess($event)"
-                              formControlName="recaptcha">
-              </ngx-recaptcha2>
-              <div class="button3">
-                <div class="button3-content" (click)="register()">Register</div>
+              <div class="captcha">
+                <ngx-recaptcha2 style="text-align: center" #captchaElem
+                                [siteKey]="'6Le36LEUAAAAAA_itvYU03ORY9mEYmoaeKEksxCH'"
+                                (reset)="handleReset()"
+                                (expire)="handleExpire()"
+                                (load)="handleLoad()"
+                                (success)="handleSuccess($event)"
+                                formControlName="recaptcha">
+                </ngx-recaptcha2>
+              </div>
+
+              <div class="button3 d-flex justify-content-center">
+                <div class="button3-content d-flex justify-content-center" (click)="register()">Register</div>
               </div>
             </form>
           </div>

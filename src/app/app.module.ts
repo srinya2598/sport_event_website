@@ -19,12 +19,15 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxCaptchaModule} from 'ngx-captcha';
 import { CountUpModule } from 'countup.js-angular2';
+import { ProfileCardComponent } from './dashboard/components/profile-card/profile-card.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { CountUpModule } from 'countup.js-angular2';
     MatAutocompleteModule,
     MatSnackBarModule,
     NgxCaptchaModule,
-    CountUpModule
+    CountUpModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
