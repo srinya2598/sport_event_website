@@ -69,20 +69,22 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    console.log('1', this.formGroup.value);
+    if (!this.formGroup.invalid.valueOf()) {
+      console.log('1', this.formGroup.value);
 
-    delete this.formGroup.value['sport'];
+      delete this.formGroup.value['sport'];
 
-    console.log('2', this.formGroup.value);
+      console.log('2', this.formGroup.value);
 
-    const value = {
-      ...this.formGroup.value,
-      sports: this.selectedSports
-    };
-    this.registrationController.register(value);
-    this.selectedSports = [];
-    this.formGroup.reset();
-    this.formGroup.markAsPristine();
+      const value = {
+        ...this.formGroup.value,
+        sports: this.selectedSports
+      };
+      this.registrationController.register(value);
+      this.selectedSports = [];
+      this.formGroup.reset();
+      this.formGroup.markAsPristine();
+    }
   }
 
   removeSports(sport: string) {

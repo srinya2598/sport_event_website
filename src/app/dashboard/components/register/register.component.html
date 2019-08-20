@@ -42,15 +42,17 @@
                     <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
                   <input placeholder="Sports" formControlName="sport" [matAutocomplete]="auto"
-                         [matChipInputFor]="chipList" >
+                         [matChipInputFor]="chipList">
                 </mat-chip-list>
-                <mat-autocomplete #auto ="matAutocomplete" (optionSelected)="addSports($event.option.value)">
-                  <mat-option *ngFor="let sport of sports" [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSports($event.option.value)">
+                  <mat-option *ngFor="let sport of sports"
+                              [value]="sport">{{CommonUtil.getSportsTitle(sport)}}</mat-option>
                 </mat-autocomplete>
-               </mat-form-field>
+              </mat-form-field>
               <mat-form-field>
                 <mat-select matInput placeholder="Residence" formControlName="residence">
-                  <mat-option *ngFor="let residence of residences" [value]="residence">{{CommonUtil.getResidenceTitle(residence)}}</mat-option>
+                  <mat-option *ngFor="let residence of residences"
+                              [value]="residence">{{CommonUtil.getResidenceTitle(residence)}}</mat-option>
                 </mat-select>
               </mat-form-field>
               <ngx-recaptcha2 style="text-align: center" #captchaElem
@@ -61,9 +63,9 @@
                               (success)="handleSuccess($event)"
                               formControlName="recaptcha">
               </ngx-recaptcha2>
-
-              <button type="submit" class="register">Register</button>
-
+              <div class="button3">
+                <div class="button3-content" (click)="register()">Register</div>
+              </div>
             </form>
           </div>
         </div>
