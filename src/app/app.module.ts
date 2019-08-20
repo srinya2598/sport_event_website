@@ -18,6 +18,7 @@ import {
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxCaptchaModule} from 'ngx-captcha';
+import { CountUpModule } from 'countup.js-angular2';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {NgxCaptchaModule} from 'ngx-captcha';
     MatChipsModule,
     MatAutocompleteModule,
     MatSnackBarModule,
-    NgxCaptchaModule
+    NgxCaptchaModule,
+    CountUpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
