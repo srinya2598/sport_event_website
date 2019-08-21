@@ -16,10 +16,14 @@
     </nav>
   </div>
   <div class="mobile-navbar">
-    <div  mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon>mor_vert</mat-icon>
+    <div class="navbar-brand"><img src="../../../../assets/akgec.png"><span style="color: green">
+          SAKSHAM</span>
+      <span style="color: white;">2019</span></div>
+
+    <div  mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+      <mat-icon style="-webkit-text-fill-color: #088308" >menu</mat-icon>
     </div>
-    <mat-menu #menu="matMenu">
+    <mat-menu #menu="matMenu" class="menu-content" >
       <button mat-menu-item>HOME</button>
       <button mat-menu-item>REGISTER</button>
       <button mat-menu-item>CONTACT</button>
