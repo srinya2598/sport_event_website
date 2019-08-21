@@ -1,10 +1,12 @@
 .profile-card {
-  width: 330px;
-  height: 280px;
-  min-width: 250px;
+  width: 20%;
+  min-width: 200px;
   position: relative;
   padding-bottom: 20px;
-  margin:50px;
+  margin-bottom: 20%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #ededed;
   .profile-pic {
     width: 140px;
     height: 140px;
@@ -27,6 +29,11 @@
       margin: 0 10px;
       margin-top: 30px;
     }
+    h3 {
+      font-size: large;
+      font-weight: bold;
+      padding: 10%;
+    }
   }
 }
 
@@ -46,4 +53,8 @@
 .link-img-md {
   width: 20px;
   height: 20px;
+}
+
+.profile-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }

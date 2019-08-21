@@ -6,6 +6,22 @@
   background-repeat: no-repeat;
 }
 
+
+@font-face {
+  font-family: Bahnschrift;
+  src: url("../../../../assets/bs.ttf");
+}
+
+@font-face {
+  font-family: daggersquare;
+  src: url("../../../../assets/do.otf");
+}
+
+.header .logo span{
+  font-family: daggersquare;
+  font-size: x-large;
+}
+
 img {
   padding: 10px;
   height: 75px;
@@ -70,7 +86,7 @@ img {
 }
 
 .schedule {
-  background-color: gainsboro;
+  background-color: #c9c9c9;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 2%;
@@ -81,15 +97,21 @@ img {
 }
 
 .schedule-header {
-  font-family: "fantasy";
+  font-family: Bahnschrift;
   padding-top: 50px;
   padding-bottom: 4vh;
+}
+
+.schedule-body-header {
+  font-family: Bahnschrift;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding-top: 4vh;
+  background-color: #ededed;
+  border-radius: 10px;
 }
 
 .card:hover {
@@ -124,23 +146,25 @@ img {
 .overview_matches {
   padding-bottom: 10%;
   padding-top: 5vh;
+  font-family: Bahnschrift;
 }
 
 .overview-header {
   padding-bottom: 5%;
+  font-family: Bahnschrift;
 }
 
 .overview-vertical {
   border-left: 5px solid white;
   height: 80px;
   position: absolute;
-  //left: 25%;
 }
 
 .details {
   color: white;
   text-align: left;
   padding: 7%;
+  font-family: Bahnschrift;
 }
 
 .details .vertical {
@@ -158,6 +182,7 @@ img {
   color: white;
   text-align: right;
   padding: 7%;
+  font-family: Bahnschrift;
 }
 
 .contact .vertical {
@@ -190,9 +215,11 @@ img {
 .team-header{
   margin-top: 50px;
   margin-bottom: 100px;
+  font-family: Bahnschrift;
 }
 
 .profile-container {
   margin: 0 auto;
   padding-bottom: 50px;
+  font-family: Bahnschrift;
 }

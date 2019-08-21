@@ -1,15 +1,13 @@
 <mat-card class="profile-card" ngClass.sm="profile-card-md" ngClass.xs="profile-card-xs">
   <img ngClass.sm="profile-pic-md" class="profile-pic" [src]="profilePic"/>
-  <div class="content">
+  <div class="content text-center">
     <h3>{{name}}</h3>
-    <h5>{{role}}</h5>
+    <!--<h5>{{role}}</h5>-->
     <div>
       <a [href]="github" target="_blank"><img ngClass.sm="link-img-md" class="link-img"
                                               src="/assets/images/links/github.png"/></a>
       <a [href]="linkedIn" target="_blank"><img ngClass.sm="link-img-md" class="link-img"
                                                 src="/assets/images/links/linkedin-logo.png"/></a>
-      <a [href]="facebook" target="_blank"><img ngClass.sm="link-img-md" class="link-img"
-                                                src="/assets/images/links/facebook-logo.png"/></a>
       <a [href]="instagram" target="_blank"><img ngClass.sm="link-img-md" class="link-img"
                                                  src="/assets/images/links/instagram.png"/></a>
     </div>
