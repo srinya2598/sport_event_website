@@ -1,16 +1,16 @@
 <div class="container-fluid main">
   <div class="desktop-navbar">
     <nav class="navba navbar-inverse">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-brand"><img src="../../../../assets/akgec.png"><span style="color: green">
           SAKSHAM</span>
           <span style="color: white;">2019</span></div>
         <ul class="nav justify-content-end">
-          <li class="nav-item"><a>HOME</a></li>
-          <li class="nav-item"><a>REGISTER</a></li>
-          <li class="nav-item"><a>CONTACT</a></li>
-          <li class="nav-item"><a>SCHEDULE</a></li>
-          <li class="nav-item"><a>THE TEAM</a></li>
+          <li class="nav-item" (click)="scrollToSection('home')"><a>HOME</a></li>
+          <li class="nav-item" (click)="scrollToSection('register')"><a>REGISTER</a></li>
+          <li class="nav-item" (click)="scrollToSection('contact')"><a>CONTACT</a></li>
+          <li class="nav-item" (click)="scrollToSection('schedule')"><a>SCHEDULE</a></li>
+          <li class="nav-item" (click)="scrollToSection('team')"><a>THE TEAM</a></li>
         </ul>
       </div>
     </nav>
@@ -24,20 +24,20 @@
       <mat-icon style="-webkit-text-fill-color: #088308" >menu</mat-icon>
     </div>
     <mat-menu #menu="matMenu" class="menu-content" >
-      <button mat-menu-item>HOME</button>
-      <button mat-menu-item>REGISTER</button>
-      <button mat-menu-item>CONTACT</button>
-      <button mat-menu-item>SCHEDULE</button>
-      <button mat-menu-item>THE TEAM</button>
+      <button mat-menu-item (click)="scrollToSection('home')">HOME</button>
+      <button mat-menu-item (click)="scrollToSection('register')">REGISTER</button>
+      <button mat-menu-item (click)="scrollToSection('contact')">CONTACT</button>
+      <button mat-menu-item (click)="scrollToSection('schedule')">SCHEDULE</button>
+      <button mat-menu-item (click)="scrollToSection('team')">THE TEAM</button>
     </mat-menu>
   </div>
-  <div class="mainbody">
+  <div class="mainbody" id="home">
     <h2>Fitness and Health<br>is a MENTALITY</h2>
     <h4>Lorum Ipsum cdenm...</h4>
     <button class=" btn btn-success">Register</button>
   </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" id="schedule">
   <div class="row schedule">
     <div class="col-md-12 text-center">
       <div class="schedule-header"><h3><span style="color: green">TODAY'S</span> MATCHES</h3></div>
@@ -152,8 +152,8 @@
     </div>
   </div>
 </div>
-<app-register></app-register>
-<div class="container-fluid" style="background-color: gainsboro;">
+<div id="register"><app-register></app-register></div>
+<div class="container-fluid"id="team" style="background-color: gainsboro;">
   <div class="row">
     <div class="col-md-12 text-center">
       <div class="team-header"><h1>THE <span style="color: green"> TEAM</span></h1></div>
@@ -208,7 +208,7 @@
   </div>
 </div>
 
-<div class="container-fluid profile-container" style="background-color: black;">
+<div class="container-fluid profile-container" id="contact" style="background-color: black;">
   <div class="row">
     <div class="col-md-6">
       <div class="details">
