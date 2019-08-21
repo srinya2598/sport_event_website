@@ -1,19 +1,31 @@
 <div class="container-fluid main">
-  <div class="header">
-    <div class="logo">
-      <img src="../../../../assets/akgec.png">
-      <span style="color: green;">SAKSHAM</span>
-      <span style="color: white;">2019</span>
-    </div>
+  <div class="desktop-navbar">
+    <nav class="navba navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-brand"><img src="../../../../assets/akgec.png"><span style="color: green">
+          SAKSHAM</span>
+          <span style="color: white;">2019</span></div>
+        <ul class="nav justify-content-end">
+          <li class="nav-item"><a>HOME</a></li>
+          <li class="nav-item"><a>REGISTER</a></li>
+          <li class="nav-item"><a>CONTACT</a></li>
+          <li class="nav-item"><a>SCHEDULE</a></li>
+          <li class="nav-item"><a>THE TEAM</a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
-  <div class="nav">
-    <ul>
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">REGISTER</a></li>
-      <li><a href="#">CONTACT</a></li>
-      <li><a href="#">SCHEDULE</a></li>
-      <li><a href="#">THE TEAM</a></li>
-    </ul>
+  <div class="mobile-navbar">
+    <div  mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>mor_vert</mat-icon>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>HOME</button>
+      <button mat-menu-item>REGISTER</button>
+      <button mat-menu-item>CONTACT</button>
+      <button mat-menu-item>SCHEDULE</button>
+      <button mat-menu-item>THE TEAM</button>
+    </mat-menu>
   </div>
   <div class="mainbody">
     <h2>Fitness and Health<br>is a MENTALITY</h2>
@@ -172,7 +184,7 @@
       <app-profile
         name="Manvi Srivastava"
         profilePic="/assets/images/1713067.jpeg"
-        role="Designer"
+        role="Front-End Developer"
       ></app-profile>
     </div>
     <div class="col-md-4">
