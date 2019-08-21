@@ -1,7 +1,8 @@
-<mat-card class="profile-card" ngClass.sm="profile-card-md">
+<mat-card class="profile-card" ngClass.sm="profile-card-md" ngClass.xs="profile-card-xs">
   <img ngClass.sm="profile-pic-md" class="profile-pic" [src]="profilePic"/>
   <div class="content">
     <h3>{{name}}</h3>
+    <h5>{{role}}</h5>
     <div>
       <a [href]="github" target="_blank"><img ngClass.sm="link-img-md" class="link-img"
                                               src="/assets/images/links/github.png"/></a>

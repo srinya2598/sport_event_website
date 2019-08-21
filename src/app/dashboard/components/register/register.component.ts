@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {CommonUtils} from '../../../shared/utils/common.utils';
-import {ValidatorsUtils} from '../../../shared/utils/validators';
-import {RegisterationController} from '../../../controller/registeration.controller';
-import {MatSnackBar} from '@angular/material';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CommonUtils } from '../../../shared/utils/common.utils';
+import { ValidatorsUtils } from '../../../shared/utils/validators';
+import { RegisterationController } from '../../../controller/registeration.controller';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-register',
@@ -38,6 +38,25 @@ export class RegisterComponent implements OnInit {
     this.genders = CommonUtils.getGender();
     this.sports = CommonUtils.getSports();
     this.residences = CommonUtils.getResidence();
+
+    $(document).ready(() => {
+
+      const slides = $('.slideShow>li');
+      const totalSlides = slides.length;
+      let slideCount = 0;
+      slideShow();
+
+      function slideShow() {
+        slides.eq(slideCount).fadeIn(500).delay(1000).fadeOut(500, () => {
+          slideCount < totalSlides - 1 ? slideCount++ : slideCount = 0;
+          slideShow();
+        });
+      }
+
+      console.log(slides);
+
+    });
+
   }
 
   ngOnInit() {

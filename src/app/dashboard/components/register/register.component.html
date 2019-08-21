@@ -8,7 +8,16 @@
   <mat-card-content>
     <div class="container">
       <div class="row">
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="slideShowContainer">
+            <ul class="slideShow">
+              <li><img class="slideShowImages" src="/assets/images/chess.jpg"/> </li>
+              <li><img class="slideShowImages" src="/assets/images/football.jpg"/> </li>
+              <li><img class="slideShowImages" src="/assets/images/run.jpg"/> </li>
+            </ul>
+          </div>
+
+        </div>
         <div class="col-md-6">
           <div class="form">
             <form [formGroup]="formGroup" (ngSubmit)="formGroup.valid&&register()" autocomplete="off">
