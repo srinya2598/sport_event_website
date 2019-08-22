@@ -8,3 +8,21 @@ table {
   position: relative;
 
 }
+
+.header {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-weight: bold;
+    letter-spacing: 1.1px;
+  }
+
+  &__name {
+    color: rgba(8, 131, 8);
+    font-family: Krunch;
+  }
+}

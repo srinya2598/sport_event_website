@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
 }
 
-
 @font-face {
   font-family: Bahnschrift;
   src: url("/assets/bs.ttf");
@@ -17,7 +16,7 @@
   src: url("/assets/do.otf");
 }
 
-.header .logo span{
+.header .logo span {
   font-family: daggersquare;
   font-size: x-large;
 }
@@ -53,11 +52,13 @@ img {
   padding-top: 12%;
   padding-left: 10%;
   color: white;
-  h1{
+  h1 {
     margin: 20px 0;
   }
 
   button {
+    width: 180px;
+    font-size: 18px;
     margin-top: 20px;
     padding: 10px 25px;
     border-radius: 40px;
@@ -215,7 +216,7 @@ img {
   height: auto;
 }
 
-.team-header{
+.team-header {
   margin-top: 50px;
   margin-bottom: 100px;
   font-family: Bahnschrift;
@@ -236,36 +237,55 @@ img {
     border: none;
     border-radius: 20px;
     padding: 16px 32px;
+    font-size: 18px;
+    color: white;;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-  }
-  .button:hover {
-    background-color: #c9c9c9;
-    color: white;
+    &:hover {
+      background-color: #c9c9c9;
+      color: #4CAF50;
+    }
+    &:active {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 }
-.mobile-navbar{
+
+.mobile-navbar {
   @media screen and (min-width: 786px) and (max-width: 3000px) {
     display: none;
 
   }
 }
 
-.desktop-navbar{
-  @media screen  and (max-width: 786px){
+.desktop-navbar {
+  @media screen and (max-width: 786px) {
     display: none;
   }
 }
-.menu{
+
+.menu {
   float: right;
   margin-top: 25px;
 }
-.row-medal{
-  padding-top:50px;
+
+.row-medal {
+  padding-top: 50px;
   padding-bottom: 30px;
-  align-content:  center;
+  align-content: center;
   background-color: #c9c9c9;
   height: 150px;
 }
 
+
+li {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}

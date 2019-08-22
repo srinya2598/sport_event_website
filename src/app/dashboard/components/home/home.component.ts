@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { MedaltallyComponent } from '../medaltally/medaltally.component';
 import { CommonUtils } from '../../../shared/utils/common.utils';
+import * as Typed from 'typed.js';
+
 
 @Component({
   selector: 'app-home',
@@ -19,6 +21,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    const options = {
+      strings: ['Inter Departmental Sports Event\'19'],
+      typeSpeed: 20,
+      smartBackspace: true
+    };
+    let typed = new Typed('#typed-strings', options);
   }
 
   scrollToSection(id: string) {
@@ -34,7 +42,7 @@ export class HomeComponent implements OnInit {
 
     let dialogConfig = {
       width: '40%',
-      height: '68%'
+      height: '78%'
     };
     if (CommonUtils.isOnMobile()) {
       dialogConfig.width = '95%';
