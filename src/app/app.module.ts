@@ -15,7 +15,7 @@ import {
   MatInputModule,
   MatMenuModule,
   MatDialogModule,
-  MatSelectModule, MatSnackBarModule
+  MatSelectModule, MatSnackBarModule, MatTableModule
 } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -51,7 +51,8 @@ import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.
     CountUpModule,
     FlexLayoutModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
