@@ -1,0 +1,80 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary-color: #088308;
+$secondary-color: white;
+$color-black: black;
+
+$saksham-primary: (
+  50 : #E8F5E9,
+  100 : #C8E6C9,
+  200 : #A5D6A7,
+  300 : #81C784,
+  400 : #66BB6A,
+  500 : #4CAF50,
+  600 : #43A047,
+  700 : #388E3C,
+  800 : #2E7D32,
+  900 : #1B5E20,
+  A100 : #B9F6CA,
+  A200 : #69F0AE,
+  A400 : #00E676,
+  A700 : #00C853,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$saksham-accent: (
+  50 : #e6f4fa,
+  100 : #c1e3f2,
+  200 : #98d0ea,
+  300 : #6ebde1,
+  400 : #4fafda,
+  500 : #30a1d4,
+  600 : #2b99cf,
+  700 : #248fc9,
+  800 : #1e85c3,
+  900 : #1374b9,
+  A100 : #eaf5ff,
+  A200 : #b7dfff,
+  A400 : #84c8ff,
+  A700 : #6abcff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$saksham-primary-palette: mat-palette($saksham-primary);
+$saksham-accent-palette: mat-palette($saksham-accent, A200, A100, A400);
+
+$saksham-theme: mat-light-theme($saksham-primary-palette, $saksham-accent-palette);
+
+@include angular-material-theme($saksham-theme);
