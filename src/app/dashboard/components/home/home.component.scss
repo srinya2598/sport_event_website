@@ -36,16 +36,13 @@ img {
   float: right;
   padding-top: 15px;
   padding-right: 50px;
-
   ul {
     list-style-type: none;
   }
-
   li {
     display: inline;
     padding: 20px;
   }
-
   a {
     text-decoration: none;
     color: slategray;
@@ -215,7 +212,7 @@ img {
   height: auto;
 }
 
-.team-header {
+.team-header{
   margin-top: 50px;
   margin-bottom: 100px;
   font-family: Bahnschrift;
@@ -227,25 +224,19 @@ img {
   font-family: Bahnschrift;
 }
 
-.desktop-navbar {
-  @media screen and (max-width: 786px) {
-    display: none;
+.medal {
+  background-color: #c9c9c9;
+  .button {
+    transition-duration: 0.4s;
+    background-color: white;
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
   }
-
-}
-
-
-.mobile-navbar {
-  display: flex;
-  @media screen and (min-width: 786px) and (max-width: 3000px) {
-    display: none;
-  }
-}
-.menu{
-  flex: 1 1 auto;
-  mat-icon {
-    float: right;
-    margin-right: 5px;
+  .button:hover {
+    background-color: #4CAF50;
+    color: white;
   }
 }
-

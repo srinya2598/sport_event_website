@@ -12,22 +12,26 @@ import {
   MatChipsModule,
   MatFormFieldModule,
   MatIconModule,
-  MatInputModule, MatMenuModule,
+  MatInputModule,
+  MatMenuModule,
+  MatDialogModule,
   MatSelectModule, MatSnackBarModule
 } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxCaptchaModule} from 'ngx-captcha';
-import { CountUpModule } from 'countup.js-angular2';
-import { ProfileCardComponent } from './dashboard/components/profile-card/profile-card.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {CountUpModule} from 'countup.js-angular2';
+import {ProfileCardComponent} from './dashboard/components/profile-card/profile-card.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     RegisterComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    MedaltallyComponent
   ],
   imports: [
     BrowserModule,
@@ -46,10 +50,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     NgxCaptchaModule,
     CountUpModule,
     FlexLayoutModule,
+    MatDialogModule,
     MatMenuModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [MedaltallyComponent]
 })
 export class AppModule {
 }
