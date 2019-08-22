@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material';
+import {MedaltallyComponent} from '../medaltally/medaltally.component';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +12,9 @@ export class HomeComponent implements OnInit {
   options = {
     duration: 3
   };
+  dialogRef: MatDialogRef<MedaltallyComponent>;
 
-  constructor() {
+  constructor(private dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -22,5 +25,16 @@ export class HomeComponent implements OnInit {
       return;
     }
     document.getElementById(id).scrollIntoView();
+
+
+  }
+
+  medalTally() {
+    let dialogData = {
+      width: '40%',
+      height: '50%'
+    };
+    this.dialogRef = this.dialog.open(MedaltallyComponent, dialogData);
+
   }
 }
