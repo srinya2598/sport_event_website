@@ -241,7 +241,10 @@ img {
   }
 }
 .menu{
-  float: right;
-  margin-top: 6%;
+  flex: 1 1 auto;
+  mat-icon {
+    float: right;
+    margin-right: 5px;
+  }
 }
 
