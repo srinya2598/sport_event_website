@@ -93,7 +93,7 @@ img {
   background-color: #c9c9c9;
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 2%;
+  padding-bottom: 5%;
 }
 
 .schedule-body {
@@ -136,7 +136,7 @@ img {
   border-left: 6px solid green;
   height: 50px;
   position: absolute;
-  left: 4%;
+  left: 3%;
 }
 
 .overview {
@@ -148,7 +148,7 @@ img {
 }
 
 .overview_matches {
-  padding-bottom: 10%;
+  padding-bottom: 5%;
   padding-top: 5vh;
   font-family: Bahnschrift;
 }
@@ -231,11 +231,11 @@ img {
 .medal {
   text-align: center;
   .button {
+    font-family: Bahnschrift;
     align-content: center;
     transition-duration: 0.4s;
     background-color: #4CAF50;
     border: none;
-    border-radius: 20px;
     padding: 16px 32px;
     font-size: 18px;
     color: white;;
@@ -252,6 +252,12 @@ img {
     &:focus {
       outline: none;
     }
+  }
+  .button:hover {
+
+    background-color: #c9c9c9;
+    color: black;
+    border: 2px solid green;
   }
 }
 
@@ -272,13 +278,10 @@ img {
   float: right;
   margin-top: 25px;
 }
-
-.row-medal {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  align-content: center;
+.row-medal{
+  align-content:  center;
   background-color: #c9c9c9;
-  height: 150px;
+  height: 80px;
 }
 
 
