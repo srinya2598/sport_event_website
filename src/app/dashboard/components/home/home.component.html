@@ -34,7 +34,7 @@
   <div class="mainbody" id="home">
     <h2>Fitness and Health<br>is a MENTALITY</h2>
     <h4>Lorum Ipsum cdenm...</h4>
-    <button class=" btn btn-success">Register</button>
+    <button class=" btn btn-success"(click)="scrollToSection('register')" >Register</button>
   </div>
 </div>
 <div class="container-fluid" id="schedule">
@@ -90,10 +90,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="row medal">
-    <button class="button" (click)="medalTally()">Medal's Tally</button>
   </div>
 
   <div class="row schedule">
@@ -157,6 +153,10 @@
     </div>
   </div>
 </div>
+<div class="row-medal">
+<div class="medal">
+  <button class="button" (click)="medalTally()">Medal's Tally</button>
+</div></div>
 <app-register id="register"></app-register>
 <div class="container-fluid" id="team" style="background-color: gainsboro;">
   <div class="row">
