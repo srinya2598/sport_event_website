@@ -79,11 +79,12 @@
 
   &__name {
     color: rgba(8, 131, 8);
-    text-shadow: 2px 2px #dbdbdb;
+    font-family: Krunch;
   }
 
   &__year {
     color: #808080;
+    font-family: Krunch;
   }
 }
 
@@ -105,3 +106,21 @@
 
   }
 }
+.register{
+  background-image: linear-gradient(315deg, #000000 0%, #7f8c8d 74%), url("../../../../assets/blur.jpg");
+  background-size: cover;
+  padding: 10%;
+  //background-color #000000;
+  //background-image linear-gradient(315deg, #000000 0%, #7f8c8d 74%);
+}
+
+@font-face {
+  font-family: Friday;
+  src: url("../../../../assets/fridayfont.ttf");
+}
+
+@font-face {
+  font-family: Krunch;
+  src: url("../../../../assets/krunch.ttf");
+}
+

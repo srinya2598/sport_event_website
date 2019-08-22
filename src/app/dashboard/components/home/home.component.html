@@ -20,10 +20,10 @@
           SAKSHAM</span>
       <span style="color: white;">2019</span></div>
 
-    <div  mat-icon-button [matMenuTriggerFor]="menu" class="menu">
-      <mat-icon style="-webkit-text-fill-color: #088308" >menu</mat-icon>
+    <div mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+      <mat-icon style="-webkit-text-fill-color: #088308">menu</mat-icon>
     </div>
-    <mat-menu #menu="matMenu" class="menu-content" >
+    <mat-menu #menu="matMenu" class="menu-content">
       <button mat-menu-item (click)="scrollToSection('home')">HOME</button>
       <button mat-menu-item (click)="scrollToSection('register')">REGISTER</button>
       <button mat-menu-item (click)="scrollToSection('contact')">CONTACT</button>
@@ -152,8 +152,8 @@
     </div>
   </div>
 </div>
-<div id="register"><app-register></app-register></div>
-<div class="container-fluid"id="team" style="background-color: gainsboro;">
+<app-register id="register"></app-register>
+<div class="container-fluid" id="team" style="background-color: gainsboro;">
   <div class="row">
     <div class="col-md-12 text-center">
       <div class="team-header"><h1>THE <span style="color: green"> TEAM</span></h1></div>
