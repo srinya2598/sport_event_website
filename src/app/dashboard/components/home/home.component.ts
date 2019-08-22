@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -17,4 +17,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  scrollToSection(id: string) {
+    if (!id) {
+      return;
+    }
+    document.getElementById(id).scrollIntoView();
+  }
 }

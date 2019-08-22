@@ -36,13 +36,16 @@ img {
   float: right;
   padding-top: 15px;
   padding-right: 50px;
+
   ul {
     list-style-type: none;
   }
+
   li {
     display: inline;
     padding: 20px;
   }
+
   a {
     text-decoration: none;
     color: slategray;
@@ -212,7 +215,7 @@ img {
   height: auto;
 }
 
-.team-header{
+.team-header {
   margin-top: 50px;
   margin-bottom: 100px;
   font-family: Bahnschrift;
@@ -223,3 +226,22 @@ img {
   padding-bottom: 50px;
   font-family: Bahnschrift;
 }
+
+.desktop-navbar {
+  @media screen and (max-width: 786px) {
+    display: none;
+  }
+
+}
+
+
+.mobile-navbar {
+  @media screen and (min-width: 786px) and (max-width: 3000px) {
+    display: none;
+  }
+}
+.menu{
+  float: right;
+  margin-top: 6%;
+}
+

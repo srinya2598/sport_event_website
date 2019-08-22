@@ -12,7 +12,7 @@ import {
   MatChipsModule,
   MatFormFieldModule,
   MatIconModule,
-  MatInputModule,
+  MatInputModule, MatMenuModule,
   MatSelectModule, MatSnackBarModule
 } from '@angular/material';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -45,7 +45,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSnackBarModule,
     NgxCaptchaModule,
     CountUpModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

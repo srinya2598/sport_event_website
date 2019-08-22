@@ -1,6 +1,21 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-mat-form-field{
+
+mat-form-field {
   display: block !important;
   height: 55px;
+}
+
+.mat-menu-panel {
+  background: #30000000 !important;
+  @media screen and (min-width: 786px) and (max-width: 3000px) {
+    display: none;
+  }
+}
+
+.mat-menu-item {
+  color: #fff;
+  &:focus {
+    outline: none;
+  }
 }
