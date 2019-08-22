@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { MedaltallyComponent } from '../medaltally/medaltally.component';
 import { CommonUtils } from '../../../shared/utils/common.utils';
-import * as Typed from 'typed.js';
+import Typed from 'typed.js';
 
 
 @Component({
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
       typeSpeed: 20,
       smartBackspace: true
     };
-    let typed = new Typed('#typed-strings', options);
+     new Typed('#typed-strings', options);
   }
 
   scrollToSection(id: string) {
