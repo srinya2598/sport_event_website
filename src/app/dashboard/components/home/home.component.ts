@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
     let dialogConfig = {
       width: '40%',
-      height: '60%'
+      height: '68%'
     };
     if (CommonUtils.isOnMobile()) {
       dialogConfig.width = '95%';
