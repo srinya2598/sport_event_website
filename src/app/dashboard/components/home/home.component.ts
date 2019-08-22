@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material';
-import {MedaltallyComponent} from '../medaltally/medaltally.component';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { MedaltallyComponent } from '../medaltally/medaltally.component';
+import { CommonUtils } from '../../../shared/utils/common.utils';
 
 @Component({
   selector: 'app-home',
@@ -30,11 +31,15 @@ export class HomeComponent implements OnInit {
   }
 
   medalTally() {
-    let dialogData = {
+
+    let dialogConfig = {
       width: '40%',
-      height: '50%'
+      height: '60%'
     };
-    this.dialogRef = this.dialog.open(MedaltallyComponent, dialogData);
+    if (CommonUtils.isOnMobile()) {
+      dialogConfig.width = '95%';
+    }
+    this.dialogRef = this.dialog.open(MedaltallyComponent, dialogConfig);
 
   }
 }

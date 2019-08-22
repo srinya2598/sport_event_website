@@ -1,9 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {IMedal} from '../../../shared/model/medal';
 
 
-const ELEMENT_DATA: IMedal[] = [
+const ELEMENT_DATA = [
   {branch: 'ME', bronze: 1, silver: 2, gold: 3},
   {branch: 'CSE', bronze: 1, silver: 2, gold: 3},
   {branch: 'CE', bronze: 1, silver: 2, gold: 3},
