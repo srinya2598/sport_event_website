@@ -24,6 +24,7 @@ import {CountUpModule} from 'countup.js-angular2';
 import {ProfileCardComponent} from './dashboard/components/profile-card/profile-card.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.component';
+import { NavbarComponent } from './dashboard/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.
     HomeComponent,
     RegisterComponent,
     ProfileCardComponent,
-    MedaltallyComponent
+    MedaltallyComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

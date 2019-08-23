@@ -1,7 +1,9 @@
 .home{
   width:100% !important;
   overflow: hidden;
-  margin-top: -100px;
+  .layercontent01 {
+    //margin-top: -100px;
+  }
 }
 
 @font-face {
@@ -14,8 +16,8 @@
   src: url("/assets/do.otf");
 }
 .rest{
+
   .main {
-    background-image: url("/assets/bg.jpg");
     background-size: cover;
     padding-bottom: 10vh;
     background-position: center;
@@ -37,22 +39,7 @@ img {
   float: left;
 }
 
-.nav {
-  float: right;
-  padding-top: 15px;
-  padding-right: 50px;
-  ul {
-    list-style-type: none;
-  }
-  li {
-    display: inline;
-    padding: 20px;
-  }
-  a {
-    text-decoration: none;
-    color: slategray;
-  }
-}
+
 
 .mainbody {
   padding-top: 12%;
@@ -267,23 +254,9 @@ img {
   }
 }
 
-.mobile-navbar {
-  @media screen and (min-width: 786px) and (max-width: 3000px) {
-    display: none;
 
-  }
-}
 
-.desktop-navbar {
-  @media screen and (max-width: 786px) {
-    display: none;
-  }
-}
 
-.menu {
-  float: right;
-  margin-top: 25px;
-}
 .row-medal{
   align-content:  center;
   background-color: #c9c9c9;

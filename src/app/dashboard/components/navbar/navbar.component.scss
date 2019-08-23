@@ -1,0 +1,50 @@
+.main{
+  z-index: 100;
+  background-color: black;
+  //height: 80px;
+}
+
+img {
+  padding: 10px;
+  height: 75px;
+  width: 75px;
+}
+.mobile-navbar {
+  @media screen and (min-width: 786px) and (max-width: 3000px) {
+    display: none;
+
+  }
+}
+
+.desktop-navbar {
+  @media screen and (max-width: 786px) {
+    display: none;
+  }
+}
+.nav-item{
+  margin-top: 0px;
+  color: white;
+}
+.container{
+  height: 80px;
+}
+.nav {
+  float: right;
+  padding-top: 15px;
+  padding-right: 50px;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline;
+    padding: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: slategray;
+  }
+}
+.menu {
+  float: right;
+  margin-top: 25px;
+}

@@ -29,15 +29,6 @@ export class HomeComponent implements OnInit {
     //  new Typed('#typed-strings', options);
   }
 
-  scrollToSection(id: string) {
-    if (!id) {
-      return;
-    }
-    document.getElementById(id).scrollIntoView();
-
-
-  }
-
   medalTally() {
 
     let dialogConfig = {
