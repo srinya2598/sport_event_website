@@ -24,6 +24,8 @@ import {CountUpModule} from 'countup.js-angular2';
 import {ProfileCardComponent} from './dashboard/components/profile-card/profile-card.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.component';
+import { FacebookComponent } from './dashboard/components/facebook/facebook.component';
+import { FacebookCardComponent } from './dashboard/components/facebook-card/facebook-card.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.
     HomeComponent,
     RegisterComponent,
     ProfileCardComponent,
-    MedaltallyComponent
+    MedaltallyComponent,
+    FacebookComponent,
+    FacebookCardComponent
   ],
   imports: [
     BrowserModule,

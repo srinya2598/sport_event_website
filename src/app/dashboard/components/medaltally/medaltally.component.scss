@@ -6,7 +6,19 @@ table {
   margin: auto;
   flex-direction: column;
   position: relative;
+  th {
+    width: 50px;
+  }
+  td {
+    padding-left: 5%;
+  }
+}
 
+@media(max-width: 767px) {
+  .medalimage {
+    height: 20%;
+    width: 20%;
+  }
 }
 
 .header {
@@ -25,4 +37,9 @@ table {
     color: rgba(8, 131, 8);
     font-family: Krunch;
   }
+}
+
+.medalimage {
+  height: 8%;
+  width: 65%;
 }

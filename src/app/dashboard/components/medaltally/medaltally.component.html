@@ -1,5 +1,5 @@
 <div class="header">
-  <h1 class="header__name">MEDAL TELLY</h1>
+  <h1 class="header__name">MEDAL TALLY</h1>
 </div>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="branch">
@@ -7,18 +7,18 @@
     <td mat-cell *matCellDef="let element"> {{element.branch}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="bronze">
-    <th mat-header-cell *matHeaderCellDef> Bronze </th>
+  <ng-container matColumnDef="bronze" class="bronze">
+    <th mat-header-cell *matHeaderCellDef><img src="/assets/bronze.png" class="medalimage"></th>
     <td mat-cell *matCellDef="let element"> {{element.bronze}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="silver">
-    <th mat-header-cell *matHeaderCellDef> Silver </th>
+  <ng-container matColumnDef="silver" class="silver">
+    <th mat-header-cell *matHeaderCellDef><img src="/assets/silver.png" class="medalimage"></th>
     <td mat-cell *matCellDef="let element"> {{element.silver}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="gold">
-    <th mat-header-cell *matHeaderCellDef> Gold </th>
+  <ng-container matColumnDef="gold" class="gold">
+    <th mat-header-cell *matHeaderCellDef><img src="/assets/gold.png" class="medalimage"></th>
     <td mat-cell *matCellDef="let element"> {{element.gold}} </td>
   </ng-container>
 

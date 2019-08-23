@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
-import { MedaltallyComponent } from '../medaltally/medaltally.component';
-import { CommonUtils } from '../../../shared/utils/common.utils';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material';
+import {MedaltallyComponent} from '../medaltally/medaltally.component';
+import {CommonUtils} from '../../../shared/utils/common.utils';
 import Typed from 'typed.js';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
   };
   dialogRef: MatDialogRef<MedaltallyComponent>;
 
-  constructor(private dialog: MatDialog) {
+  constructor(private dialog: MatDialog, private route: Router) {
   }
 
   ngOnInit() {
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit {
       typeSpeed: 20,
       smartBackspace: true
     };
-     new Typed('#typed-strings', options);
+    new Typed('#typed-strings', options);
   }
 
   scrollToSection(id: string) {
@@ -48,6 +49,11 @@ export class HomeComponent implements OnInit {
       dialogConfig.width = '95%';
     }
     this.dialogRef = this.dialog.open(MedaltallyComponent, dialogConfig);
+
+  }
+
+  facebook() {
+    this.route.navigate(['facebook']);
 
   }
 }
