@@ -87,7 +87,9 @@
     font-family: Krunch;
   }
 }
-
+.header h1{
+  font-size:40px;
+}
 .slideShowContainer {
   .slideShow {
     position: relative;
@@ -111,7 +113,6 @@
   background-size: cover;
   padding: 10%;
 }
-
 @font-face {
   font-family: Friday;
   src: url("../../../../assets/fridayfont.ttf");

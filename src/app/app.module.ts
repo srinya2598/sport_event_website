@@ -24,7 +24,10 @@ import {CountUpModule} from 'countup.js-angular2';
 import {ProfileCardComponent} from './dashboard/components/profile-card/profile-card.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.component';
-import { NavbarComponent } from './dashboard/components/navbar/navbar.component';
+import {FacebookComponent} from './dashboard/components/facebook/facebook.component';
+import {FacebookCardComponent} from './dashboard/components/facebook-card/facebook-card.component';
+import {NavbarComponent} from './dashboard/components/navbar/navbar.component';
+import {TeamComponent} from './dashboard/components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { NavbarComponent } from './dashboard/components/navbar/navbar.component'
     RegisterComponent,
     ProfileCardComponent,
     MedaltallyComponent,
-    NavbarComponent
+    FacebookComponent,
+    FacebookCardComponent,
+    NavbarComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
