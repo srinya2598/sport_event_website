@@ -26,6 +26,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MedaltallyComponent} from './dashboard/components/medaltally/medaltally.component';
 import { FacebookComponent } from './dashboard/components/facebook/facebook.component';
 import { FacebookCardComponent } from './dashboard/components/facebook-card/facebook-card.component';
+import { TeamComponent } from './dashboard/components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FacebookCardComponent } from './dashboard/components/facebook-card/face
     ProfileCardComponent,
     MedaltallyComponent,
     FacebookComponent,
-    FacebookCardComponent
+    FacebookCardComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

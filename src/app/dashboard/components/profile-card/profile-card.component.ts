@@ -9,8 +9,5 @@ export class ProfileCardComponent {
 
   @Input() name: string;
   @Input() profilePic: string;
-  @Input() github: string;
-  @Input() linkedIn: string;
-  @Input() instagram: string;
-
+  @Input() role: string;
 }
