@@ -7,14 +7,16 @@ mat-form-field {
 }
 
 .mat-menu-panel {
-  background: #30000000 !important;
+  background: black !important;
   @media screen and (min-width: 786px) and (max-width: 3000px) {
     display: none;
   }
 }
 
 .mat-menu-item {
-  color: #fff;
+  color: white;
+  font-weight: bold;
+
   &:focus {
     outline: none;
   }

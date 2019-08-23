@@ -1,19 +1,23 @@
-.home{
-  width:100% !important;
+.home {
+  width: 100% !important;
   overflow: hidden;
   height: 80% !important;
 }
-.rest h1{
-  font-size:40px;
+
+.rest h1 {
+  font-size: 40px;
 }
+
 .rest {
   font-size: 15px;
 }
-.rest h3{
-  font-size:30px;
+
+.rest h3 {
+  font-size: 30px;
 }
-.rest h2{
-  font-size:33px;
+
+.rest h2 {
+  font-size: 33px;
 }
 
 @font-face {
@@ -25,7 +29,8 @@
   font-family: daggersquare;
   src: url("/assets/do.otf");
 }
-.rest{
+
+.rest {
 
   .main {
     background-size: cover;
@@ -34,257 +39,262 @@
     background-repeat: no-repeat;
   }
 
-.header .logo span {
-  font-family: daggersquare;
-  font-size: x-large;
-}
-
-img {
-  padding: 10px;
-  height: 75px;
-  width: 75px;
-}
-
-.header {
-  float: left;
-}
-
-
-
-.mainbody {
-  padding-top: 12%;
-  padding-left: 10%;
-  color: white;
-  h1 {
-    margin: 20px 0;
+  .header .logo span {
+    font-family: daggersquare;
+    font-size: x-large;
   }
 
-  button {
-    width: 180px;
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 10px 25px;
-    border-radius: 40px;
+  img {
+    padding: 10px;
+    height: 75px;
+    width: 75px;
   }
-}
 
-@media(max-width: 767px) {
+  .header {
+    float: left;
+  }
+
+
   .mainbody {
-    padding-top: 95%;
+    padding-top: 12%;
+    padding-left: 10%;
+    color: white;
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    button {
+      width: 180px;
+      font-size: 18px;
+      margin-top: 20px;
+      padding: 10px 25px;
+      border-radius: 40px;
+    }
   }
-  .schedule-body-header {
+
+  @media(max-width: 767px) {
+    .mainbody {
+      padding-top: 95%;
+    }
+    .schedule-body-header {
+      padding-left: 5%;
+    }
+    .overview-header {
+      padding-top: 15%;
+    }
+    .overview {
+      padding-top: 10%;
+      padding-bottom: 20%;
+    }
+    .overview_matches {
+      padding-top: 1%;
+      padding-bottom: 5%;
+    }
+
+    .overview-vertical {
+      display: none;
+    }
+  }
+
+  .schedule {
+    background-color: #c9c9c9;
     padding-left: 5%;
-  }
-  .overview-header {
-    padding-top: 15%;
-  }
-  .overview {
-    padding-top: 10%;
-    padding-bottom: 20%;
-  }
-  .overview_matches {
-    padding-top: 1%;
+    padding-right: 5%;
     padding-bottom: 5%;
   }
 
-  .overview-vertical {
-    display: none;
+  .schedule-body {
+    margin-top: 50px;
   }
-}
 
-.schedule {
-  background-color: #c9c9c9;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 5%;
-}
-
-.schedule-body {
-  margin-top: 50px;
-}
-
-.schedule-header {
-  font-family: Bahnschrift;
-  padding-top: 50px;
-  padding-bottom: 4vh;
-}
-
-.schedule-body-header {
-  font-family: Bahnschrift;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  padding-top: 4vh;
-  background-color: #ededed;
-  border-radius: 10px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.col-left {
-  float: left;
-  padding-left: 13%;
-}
-
-.col-right {
-  float: right;
-  padding-right: 13%;
-}
-
-.schedule-body .vertical {
-  border-left: 6px solid green;
-  height: 50px;
-  position: absolute;
-  left: 3%;
-}
-
-.overview {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/sports.jpg');
-  background-size: cover;
-  color: white;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.overview_matches {
-  padding-bottom: 5%;
-  padding-top: 5vh;
-  font-family: Bahnschrift;
-}
-
-.overview-header {
-  padding-bottom: 5%;
-  font-family: Bahnschrift;
-}
-
-.overview-vertical {
-  border-left: 5px solid white;
-  height: 80px;
-  position: absolute;
-}
-
-.details {
-  color: white;
-  text-align: left;
-  padding: 7%;
-  font-family: Bahnschrift;
-}
-
-.details .vertical {
-  border-left: 4px solid white;
-  height: 12%;
-  position: absolute;
-  left: 6%;
-}
-
-.details p {
-  padding-top: 4%;
-}
-
-.contact {
-  color: white;
-  text-align: right;
-  padding: 7%;
-  font-family: Bahnschrift;
-}
-
-.contact .vertical {
-  border-right: 4px solid white;
-  height: 12%;
-  position: absolute;
-  //float: right;
-  right: 6%;
-}
-
-.contact p {
-  padding-top: 4%;
-}
-
-.contact-hr {
-  width: 80%;
-  border-top: 2px solid white;
-}
-
-.footer {
-  color: white;
-  padding: 1%;
-}
-
-.responsive {
-  width: 100%;
-  height: auto;
-}
-
-.team-header {
-  margin-top: 50px;
-  margin-bottom: 100px;
-  font-family: Bahnschrift;
-}
-
-.profile-container {
-  margin: 0 auto;
-  padding-bottom: 50px;
-  font-family: Bahnschrift;
-}
-
-.medal {
-  text-align: center;
-  .button {
+  .schedule-header {
     font-family: Bahnschrift;
-    align-content: center;
-    transition-duration: 0.4s;
-    background-color: #4CAF50;
-    border: none;
-    padding: 16px 32px;
-    font-size: 18px;
-    color: white;;
+    padding-top: 50px;
+    padding-bottom: 4vh;
+  }
+
+  .schedule-body-header {
+    font-family: Bahnschrift;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding-top: 4vh;
+    background-color: #ededed;
+    border-radius: 10px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .col-left {
+    float: left;
+    padding-left: 13%;
+  }
+
+  .col-right {
+    float: right;
+    padding-right: 13%;
+  }
+
+  .schedule-body .vertical {
+    border-left: 6px solid green;
+    height: 50px;
+    position: absolute;
+    left: 3%;
+  }
+
+  .overview {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/sports.jpg');
+    background-size: cover;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .overview_matches {
+    padding-bottom: 5%;
+    padding-top: 5vh;
+    font-family: Bahnschrift;
+  }
+
+  .overview-header {
+    padding-bottom: 5%;
+    font-family: Bahnschrift;
+  }
+
+  .overview-vertical {
+    border-left: 5px solid white;
+    height: 80px;
+    position: absolute;
+  }
+
+  .details {
+    color: white;
+    text-align: left;
+    padding: 7%;
+    font-family: Bahnschrift;
+  }
+
+  .details .vertical {
+    border-left: 4px solid white;
+    height: 12%;
+    position: absolute;
+    left: 6%;
+  }
+
+  .details p {
+    padding-top: 4%;
+  }
+
+  .contact {
+    color: white;
+    text-align: right;
+    padding: 7%;
+    font-family: Bahnschrift;
+  }
+
+  .contact .vertical {
+    border-right: 4px solid white;
+    height: 12%;
+    position: absolute;
+    //float: right;
+    right: 6%;
+  }
+
+  .contact p {
+    padding-top: 4%;
+  }
+
+  .contact-hr {
+    width: 80%;
+    border-top: 2px solid white;
+  }
+
+  .footer {
+    color: white;
+    padding: 1%;
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .team-header {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-family: Bahnschrift;
+  }
+
+  .profile-container {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    font-family: Bahnschrift;
+  }
+
+  .medal {
     text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    &:hover {
+
+    .button {
+      font-family: Bahnschrift;
+      align-content: center;
+      transition-duration: 0.4s;
+      background-color: #4CAF50;
+      border: none;
+      padding: 16px 32px;
+      font-size: 18px;
+      color: white;;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #c9c9c9;
+        color: #4CAF50;
+      }
+
+      &:active {
+        outline: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .button:hover {
+
       background-color: #c9c9c9;
-      color: #4CAF50;
-    }
-    &:active {
-      outline: none;
-    }
-    &:focus {
-      outline: none;
+      color: black;
+      border: 2px solid green;
     }
   }
-  .button:hover {
 
-    background-color: #c9c9c9;
-    color: black;
-    border: 2px solid green;
+
+  .about {
+    background-color: #dcdcdc;
   }
-}
+
+  .medal {
+    align-content: center;
+
+    height: 80px;
+  }
 
 
+  li {
+    cursor: pointer;
+  }
 
-.about{
-  background-color: #dcdcdc;
-}
-.medal{
-  align-content:  center;
+  button {
+    cursor: pointer;
+  }
 
-  height: 80px;
-}
-
-
-li {
-  cursor: pointer;
-}
-
-button {
-  cursor: pointer;
-}
-
-  .circles{
+  .circles {
     position: absolute;
     top: 0;
     left: 0;
@@ -293,7 +303,7 @@ button {
     overflow: hidden;
   }
 
-  .circles li{
+  .circles li {
     position: absolute;
     display: block;
     list-style: none;
@@ -305,7 +315,7 @@ button {
 
   }
 
-  .circles li:nth-child(1){
+  .circles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
@@ -314,21 +324,21 @@ button {
 
 
   .circles li:nth-child(2) {
-   left:10%;
-   width:20px;
-   height:20px;
-   animation-delay:2s;
-   animation-duration:12s;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
   }
 
-  .circles li:nth-child(3){
+  .circles li:nth-child(3) {
     left: 70%;
     width: 20px;
     height: 20px;
     animation-delay: 4s;
   }
 
-  .circles li:nth-child(4){
+  .circles li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
@@ -336,14 +346,14 @@ button {
     animation-duration: 18s;
   }
 
-  .circles li:nth-child(5){
+  .circles li:nth-child(5) {
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
   }
 
-  .circles li:nth-child(6){
+  .circles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
@@ -351,50 +361,50 @@ button {
   }
 
   .circles li:nth-child(7) {
-   left:35%;
-   width:150px;
-   height:150px;
-   animation-delay:7s;
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
   }
 
- .circles li:nth-child(8){
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 15s;
-  animation-duration: 45s;
- }
-
- .circles li:nth-child(9){
-  left: 20%;
-  width: 15px;
-  height: 15px;
-  animation-delay: 2s;
-  animation-duration: 35s;
- }
-  .circles li:nth-child(10){
-  left: 85%;
-  width: 150px;
-  height: 150px;
-  animation-delay: 0s;
-  animation-duration: 11s;
-}
-
-
-
-@keyframes animate {
-
-  0%{
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-    border-radius: 0;
+  .circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
   }
 
-  100%{
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-    border-radius: 50%;
+  .circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
   }
 
-}
+  .circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+
+
+  @keyframes animate {
+
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+
+  }
 }
