@@ -1,5 +1,5 @@
 .button3 {
-  background-color: #088308;
+  background-color: #bb0000;
   margin: 15px auto;
   width: 100px;
   height: 50px;
@@ -12,7 +12,7 @@
 .button3:hover {
   width: 50px;
   background-color: rgba(255, 244, 255, 1);
-  border: 2px dotted rgba(8, 131, 8);
+  border: 2px dotted #bb0000;
   transform: rotate(-90deg);
   cursor: pointer;
   transition: all .5s;
@@ -45,7 +45,7 @@
   left: 113px;
   content: '(:';
   font-size: 45px;
-  color: rgba(8, 131, 8);
+  color: #bb0000;
 }
 
 .button3:active .button3-content:after {
@@ -78,7 +78,7 @@
   }
 
   &__name {
-    color: rgba(8, 131, 8);
+    color: #ed7737;
     font-family: Krunch;
   }
 
