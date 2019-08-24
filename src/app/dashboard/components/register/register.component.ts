@@ -89,12 +89,12 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    if (!this.formGroup.invalid.valueOf()) {
-      console.log('1', this.formGroup.value);
+    if (!this.formGroup.invalid) {
+      console.log(this.formGroup.value);
 
       delete this.formGroup.value['sport'];
 
-      console.log('2', this.formGroup.value);
+      console.log(this.formGroup.value);
 
       const value = {
         ...this.formGroup.value,
