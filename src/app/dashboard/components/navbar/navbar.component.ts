@@ -36,7 +36,4 @@ export class NavbarComponent implements OnInit {
 
 
   }
-facebook(){
-    this.route.navigate(['facebook']);
-}
 }
