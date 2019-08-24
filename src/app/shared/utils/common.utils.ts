@@ -1,8 +1,8 @@
-import { IBranch } from '../model/branch';
-import { ISportCategory } from '../model/sports';
-import { IGender } from '../model/gender';
-import { IResidence } from '../model/residence';
-import { IYear } from '../model/year';
+import {IBranch} from '../model/branch';
+import {ISportCategory} from '../model/sports';
+import {IGender} from '../model/gender';
+import {IResidence} from '../model/residence';
+import {IYear} from '../model/year';
 
 export class CommonUtils {
   static getBranches() {
@@ -30,6 +30,7 @@ export class CommonUtils {
     return Object.keys(enumRef).map(key => enumRef[key]);
   }
 
+//get titles function unit test
   static getBranchTitle(branch: IBranch) {
     let branchTitle;
     switch (branch) {
@@ -80,6 +81,7 @@ export class CommonUtils {
     }
     return genderTitle;
   }
+
   static getResidenceTitle(residence: IResidence) {
     let residenceTitle;
     switch (residence) {

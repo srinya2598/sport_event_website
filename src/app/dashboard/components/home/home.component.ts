@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private dialog: MatDialog, private route: Router) {
   }
-
+// facebook, medal method unit test
   ngOnInit() {
     const options = {
       strings: ['Inter Departmental Sports Event\'19'],

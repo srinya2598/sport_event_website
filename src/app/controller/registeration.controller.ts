@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {HttpService} from '../services/http.service';
-import {IUser} from '../shared/model/user';
 import {MatSnackBar} from '@angular/material';
 
 @Injectable({
@@ -17,6 +16,7 @@ export class RegisterationController {
 
   }
 
+//register method unit test
   register(userData) {
     if (!userData) {
       console.log('user data no available');

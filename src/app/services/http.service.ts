@@ -12,6 +12,8 @@ export class HttpService {
 
   constructor(private http: HttpClient) {
   }
+
+  //get method and post method unit test
   post(endPoint: string, body: IUser): Observable<any> {
     const url = this.BASE_URL + endPoint;
     return this.http.post(url, body);

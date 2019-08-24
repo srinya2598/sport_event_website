@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { CommonUtils } from '../../../shared/utils/common.utils';
-import { ValidatorsUtils } from '../../../shared/utils/validators';
-import { RegisterationController } from '../../../controller/registeration.controller';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {CommonUtils} from '../../../shared/utils/common.utils';
+import {ValidatorsUtils} from '../../../shared/utils/validators';
+import {RegisterationController} from '../../../controller/registeration.controller';
 import * as $ from 'jquery';
 
 @Component({
@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
 
   CommonUtil = CommonUtils;
 
+//register,addsports,removesports unit test
   constructor(private registrationController: RegisterationController,
   ) {
     this.branches = CommonUtils.getBranches();
@@ -64,7 +65,7 @@ export class RegisterComponent implements OnInit {
     this.contact_number = new FormControl(null, [Validators.required, Validators.pattern('[0-9]{10,10}')]);
     this.student_number = new FormControl(null,
       [Validators.required, ValidatorsUtils.validateStudentNumber.bind(this)]);
-    this.email = new FormControl(null, [Validators.required, Validators.email]);
+    this.email = new FormControl(null, [Validators.required, ValidatorsUtils.validateEmail.bind(this)]);
     this.branch = new FormControl(null, [Validators.required]);
     this.year = new FormControl(null, [Validators.required]);
     this.gender = new FormControl(null, [Validators.required]);
