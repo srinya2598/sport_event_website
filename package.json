@@ -24,6 +24,8 @@
     "@angular/router": "~8.2.2",
     "@ngrx/store": "^8.2.0",
     "@types/jest": "^24.0.18",
+    "angular-particle": "^1.0.4",
+    "angular-svg-round-progressbar": "^3.0.1",
     "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",

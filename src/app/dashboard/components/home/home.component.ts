@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 import {HttpService} from '../../../services/http.service';
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -46,7 +47,7 @@ export class HomeComponent implements OnInit {
 
     let dialogConfig = {
       width: '40%',
-      height: '78%'
+      height: '90%'
     };
     if (CommonUtils.isOnMobile()) {
       dialogConfig.width = '95%';

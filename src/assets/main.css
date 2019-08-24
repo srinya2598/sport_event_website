@@ -1324,7 +1324,7 @@ h6 {
   }
   .layercontent01 {
     left: 0% !important;
-    top: 150px !important;
+    top: 450px !important;
   }
   .layercontent02{
     top:100px;
@@ -1363,7 +1363,9 @@ h6 {
 
 .layercontent01 {
   left: 0% !important;
-  top: 150px !important; }
+  top: 150px !important;
+  margin-top: -120px !important;
+}
 
   
 /* 

@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './dashboard/components/home/home.component';
@@ -19,6 +19,9 @@ import {FacebookCardComponent} from './dashboard/components/facebook-card/facebo
 import {NavbarComponent} from './dashboard/components/navbar/navbar.component';
 import {TeamComponent} from './dashboard/components/team/team.component';
 import { MaterialModule } from '../materal.module';
+import { CarouselComponent } from './dashboard/components/carousel/carousel.component';
+import { CarouselCardComponent } from './dashboard/components/carousel-card/carousel-card.component';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { MaterialModule } from '../materal.module';
     FacebookComponent,
     FacebookCardComponent,
     NavbarComponent,
-    TeamComponent
+    TeamComponent,
+    CarouselComponent,
+    CarouselCardComponent
   ],
   imports: [
     MaterialModule,
@@ -41,7 +46,9 @@ import { MaterialModule } from '../materal.module';
     HttpClientModule,
     NgxCaptchaModule,
     CountUpModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RoundProgressModule,
+    ParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent],
