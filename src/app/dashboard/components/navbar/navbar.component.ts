@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() {
+  constructor(private route: Router) {
     $(document).ready(() => {
       $(function () {
         const navbar = $('.navbar');
@@ -35,5 +36,7 @@ export class NavbarComponent implements OnInit {
 
 
   }
-
+facebook(){
+    this.route.navigate(['facebook']);
+}
 }
