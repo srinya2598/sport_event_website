@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {RoundProgressModule} from 'angular-svg-round-progressbar';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './dashboard/components/home/home.component';
@@ -28,6 +28,9 @@ import {FacebookComponent} from './dashboard/components/facebook/facebook.compon
 import {FacebookCardComponent} from './dashboard/components/facebook-card/facebook-card.component';
 import {NavbarComponent} from './dashboard/components/navbar/navbar.component';
 import {TeamComponent} from './dashboard/components/team/team.component';
+import { CarouselComponent } from './dashboard/components/carousel/carousel.component';
+import { CarouselCardComponent } from './dashboard/components/carousel-card/carousel-card.component';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import {TeamComponent} from './dashboard/components/team/team.component';
     FacebookComponent,
     FacebookCardComponent,
     NavbarComponent,
-    TeamComponent
+    TeamComponent,
+    CarouselComponent,
+    CarouselCardComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,9 @@ import {TeamComponent} from './dashboard/components/team/team.component';
     FlexLayoutModule,
     MatDialogModule,
     MatMenuModule,
-    MatTableModule
+    MatTableModule,
+    RoundProgressModule,
+    ParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent],

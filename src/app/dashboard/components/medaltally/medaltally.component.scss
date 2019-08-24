@@ -1,6 +1,6 @@
 table {
   width: 100%;
-  background-color: #e7e7e7;
+  background-color: white;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -23,10 +23,12 @@ table {
 
 .header {
   width: 100%;
+  padding: 5%;
   margin: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 
   h2 {
     font-weight: bold;
@@ -34,7 +36,7 @@ table {
   }
 
   &__name {
-    color: rgba(8, 131, 8);
+    color: #ed7737;
     font-family: Krunch;
   }
 }

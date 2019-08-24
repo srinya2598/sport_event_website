@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
-import { MedaltallyComponent } from '../medaltally/medaltally.component';
-import { CommonUtils } from '../../../shared/utils/common.utils';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material';
+import {MedaltallyComponent} from '../medaltally/medaltally.component';
+import {CommonUtils} from '../../../shared/utils/common.utils';
 import Typed from 'typed.js';
 import {Router} from '@angular/router';
+
 
 
 @Component({
@@ -43,7 +44,7 @@ export class HomeComponent implements OnInit {
 
     let dialogConfig = {
       width: '40%',
-      height: '78%'
+      height: '90%'
     };
     if (CommonUtils.isOnMobile()) {
       dialogConfig.width = '95%';
@@ -51,6 +52,7 @@ export class HomeComponent implements OnInit {
     this.dialogRef = this.dialog.open(MedaltallyComponent, dialogConfig);
 
   }
+
   facebook() {
     this.route.navigate(['facebook']);
   }
