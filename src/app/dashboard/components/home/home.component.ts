@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
-import { MedaltallyComponent } from '../medaltally/medaltally.component';
-import { CommonUtils } from '../../../shared/utils/common.utils';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog, MatDialogRef} from '@angular/material';
+import {MedaltallyComponent} from '../medaltally/medaltally.component';
+import {CommonUtils} from '../../../shared/utils/common.utils';
 import Typed from 'typed.js';
 import {Router} from '@angular/router';
+import {HttpService} from '../../../services/http.service';
 
 
 @Component({
@@ -18,8 +19,12 @@ export class HomeComponent implements OnInit {
   };
   dialogRef: MatDialogRef<MedaltallyComponent>;
 
-  constructor(private dialog: MatDialog, private route: Router) {
+  constructor(private dialog: MatDialog, private route: Router, private httpService: HttpService) {
+    this.httpService.getFacebookPosts().subscribe((res) => {
+      console.log(res);
+    }, (err) => console.log(err));
   }
+
 // facebook, medal method unit test
   ngOnInit() {
     const options = {
@@ -51,6 +56,7 @@ export class HomeComponent implements OnInit {
     this.dialogRef = this.dialog.open(MedaltallyComponent, dialogConfig);
 
   }
+
   facebook() {
     this.route.navigate(['facebook']);
   }
