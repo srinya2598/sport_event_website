@@ -23,13 +23,13 @@
           <div class="form">
             <form [formGroup]="formGroup" (ngSubmit)="formGroup.valid&&register()" autocomplete="off">
               <mat-form-field >
-                <input matInput placeholder="Name" formControlName="name" autocomplete="false">
+                <input matInput placeholder="Name" formControlName="fullName" autocomplete="false">
               </mat-form-field>
               <mat-form-field >
-                <input matInput placeholder="Contact Number" formControlName="contact_number">
+                <input matInput placeholder="Contact Number" formControlName="mobileNumber">
               </mat-form-field>
               <mat-form-field >
-                <input matInput placeholder="Student Number" formControlName="student_number">
+                <input matInput placeholder="Student Number" formControlName="studentNumber">
               </mat-form-field>
               <mat-form-field >
                 <input matInput placeholder="Email" formControlName="email">
@@ -56,7 +56,7 @@
               <mat-form-field >
                 <mat-chip-list #chipList>
                   <mat-chip *ngFor="let sport of selectedSports" [selectable]="true" [removable]="true"
-                            (removed)="removeSports(sport) ">{{sport}}
+                            (removed)="removeSports(sport) ">{{CommonUtil.getSportsTitle(sport)}}
                     <mat-icon matChipRemove>cancel</mat-icon>
                   </mat-chip>
                   <input placeholder="Sports" formControlName="sport" [matAutocomplete]="auto"
@@ -69,9 +69,9 @@
                 </mat-autocomplete>
               </mat-form-field>
               <mat-form-field>
-                <mat-select matInput placeholder="Residence" formControlName="residence">
-                  <mat-option *ngFor="let residence of residences"
-                              [value]="residence">{{CommonUtil.getResidenceTitle(residence)}}
+                <mat-select matInput placeholder="Hosteler" formControlName="hosteler">
+                  <mat-option *ngFor="let hosteler of hostelers"
+                              [value]="hosteler">{{CommonUtil.getHostelerTitle(hosteler)}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>

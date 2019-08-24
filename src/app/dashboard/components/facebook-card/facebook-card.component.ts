@@ -7,14 +7,20 @@ import {IPost} from '../../../shared/model/post';
   styleUrls: ['./facebook-card.component.scss']
 })
 export class FacebookCardComponent implements OnInit {
-@Input() post: IPost;
-image_url: string;
-message: string;
-  constructor() { }
+  @Input() post: IPost;
+  image_url: string;
+  message: string;
+  sportName: string;
+  date: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
-    this.image_url = this.post.full_picture;
-    this.message = this.post.message;
+    this.image_url = this.post.image;
+    this.message = this.post.summary;
+    this.sportName = this.post.sportName;
+    this.date = this.post.date;
   }
 
 }

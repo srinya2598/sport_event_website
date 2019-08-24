@@ -4,8 +4,7 @@ import {MedaltallyComponent} from '../medaltally/medaltally.component';
 import {CommonUtils} from '../../../shared/utils/common.utils';
 import Typed from 'typed.js';
 import {Router} from '@angular/router';
-import {HttpService} from '../../../services/http.service';
-
+import {IMedal} from '../../../shared/model/medal';
 
 
 @Component({
@@ -14,11 +13,11 @@ import {HttpService} from '../../../services/http.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   options = {
     duration: 3
   };
   dialogRef: MatDialogRef<MedaltallyComponent>;
+  medals: IMedal[];
 
   constructor(private dialog: MatDialog, private route: Router) {
 
@@ -59,4 +58,7 @@ export class HomeComponent implements OnInit {
   facebook() {
     this.route.navigate(['facebook']);
   }
+
+
 }
+

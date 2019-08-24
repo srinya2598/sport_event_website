@@ -1,5 +1,6 @@
 export interface IPost {
-  id: string;
-  full_picture: string;
-  message: string;
+  sportName: string;
+  image: string;
+  date: string;
+  summary: string;
 }

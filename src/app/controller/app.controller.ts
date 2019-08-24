@@ -27,17 +27,26 @@ export class AppController {
         this.snackBar.open(this.successMessage
         );
       },
-      (error) => {
-        console.log('fail', error);
-        this.snackBar.open(this.errorMessage, null, {
+      (e) => {
+        console.log('fail', e);
+        console.log(e.error.error);
+        this.snackBar.open(e.error.errors[0].msg, null, {
           duration: 5000
         });
       });
     console.log(userData);
   }
-  getFacebookPost(){
-    return this.httpService.getFacebookPosts();
+
+  getFacebookPost() {
+    return this.httpService.get('/news');
   }
 
+  getmedalTally() {
+    return this.httpService.get('/medal');
+  }
+
+  getSchedule() {
+    return this.httpService.get('/schedules');
+  }
 
 }

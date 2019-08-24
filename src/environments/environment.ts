@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://saksham-backend.herokuapp.com',
-  facebookUrl: 'https://graph.facebook.com/'
+  baseUrl: 'https://saksham2019.herokuapp.com'
 };
 
 /*

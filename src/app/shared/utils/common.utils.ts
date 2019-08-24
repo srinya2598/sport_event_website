@@ -1,7 +1,7 @@
 import {IBranch} from '../model/branch';
 import {ISportCategory} from '../model/sports';
 import {IGender} from '../model/gender';
-import {IResidence} from '../model/residence';
+import {IHosteler} from '../model/hosteler';
 import {IYear} from '../model/year';
 
 export class CommonUtils {
@@ -21,8 +21,8 @@ export class CommonUtils {
     return this.getEnumKeys<IYear>(IYear);
   }
 
-  static getResidence() {
-    return this.getEnumKeys<IResidence>(IResidence);
+  static getHosteler() {
+    return this.getEnumKeys<IHosteler>(IHosteler);
   }
 
   static getEnumKeys<T>(enumRef: any
@@ -82,14 +82,14 @@ export class CommonUtils {
     return genderTitle;
   }
 
-  static getResidenceTitle(residence: IResidence) {
+  static getHostelerTitle(residence: IHosteler) {
     let residenceTitle;
     switch (residence) {
-      case IResidence.DAY_SCHOLAR:
-        residenceTitle = 'Day Scholar';
+      case IHosteler.YES:
+        residenceTitle = 'Yes';
         break;
-      case IResidence.HOSTELER:
-        residenceTitle = 'Hosteler';
+      case IHosteler.NO:
+        residenceTitle = 'No';
         break;
       default:
         residenceTitle = '';

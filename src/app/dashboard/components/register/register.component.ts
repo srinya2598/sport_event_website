@@ -12,20 +12,20 @@ import * as $ from 'jquery';
 })
 export class RegisterComponent implements OnInit {
   formGroup: FormGroup;
-  name: FormControl;
-  contact_number: FormControl;
-  student_number: FormControl;
+  fullName: FormControl;
+  mobileNumber: FormControl;
+  studentNumber: FormControl;
   email: FormControl;
   branch: FormControl;
   year: FormControl;
   gender: FormControl;
   sport: FormControl;
-  residence: FormControl;
+  hosteler: FormControl;
   branches: string[];
   years: string[];
   genders: string[];
   sports: string[];
-  residences: string[];
+  hostelers: string[];
   selectedSports: string[] = [];
   recaptcha: FormControl;
 
@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
     this.years = CommonUtils.getYear();
     this.genders = CommonUtils.getGender();
     this.sports = CommonUtils.getSports();
-    this.residences = CommonUtils.getResidence();
+    this.hostelers = CommonUtils.getHosteler();
 
     $(document).ready(() => {
 
@@ -61,27 +61,27 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.name = new FormControl(null, [Validators.required]);
-    this.contact_number = new FormControl(null, [Validators.required, Validators.pattern('[0-9]{10,10}')]);
-    this.student_number = new FormControl(null,
+    this.fullName = new FormControl(null, [Validators.required]);
+    this.mobileNumber = new FormControl(null, [Validators.required, Validators.pattern('[0-9]{10,10}')]);
+    this.studentNumber = new FormControl(null,
       [Validators.required, ValidatorsUtils.validateStudentNumber.bind(this)]);
     this.email = new FormControl(null, [Validators.required, ValidatorsUtils.validateEmail.bind(this)]);
     this.branch = new FormControl(null, [Validators.required]);
     this.year = new FormControl(null, [Validators.required]);
     this.gender = new FormControl(null, [Validators.required]);
     this.sport = new FormControl(null, [Validators.required]);
-    this.residence = new FormControl(null, [Validators.required]);
+    this.hosteler = new FormControl(null, [Validators.required]);
     this.recaptcha = new FormControl(null, [Validators.required]);
     this.formGroup = new FormGroup({
-      'name': this.name,
-      'contact_number': this.contact_number,
-      'student_number': this.student_number,
+      'fullName': this. fullName,
+      'mobileNumber': this.mobileNumber,
+      'studentNumber': this.studentNumber,
       'email': this.email,
       'branch': this.branch,
       'year': this.year,
       'gender': this.gender,
       'sport': this.sport,
-      'residence': this.residence,
+      'hosteler': this.hosteler,
       'recaptcha': this.recaptcha
     });
 

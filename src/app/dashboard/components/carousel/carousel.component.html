@@ -6,48 +6,11 @@
     <div class="col-md-12">
       <div class="slider">
         <div class="slide-track">
+          <ng-container *ngFor="let schedule of schedules">
           <div class="slide">
-            <app-carousel-card></app-carousel-card>
+            <app-carousel-card [schedule]="schedule"></app-carousel-card>
           </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
-          <div class="slide">
-            <app-carousel-card></app-carousel-card>
-          </div>
+          </ng-container>
         </div>
       </div>
     </div>
