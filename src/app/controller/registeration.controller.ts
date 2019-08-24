@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpService} from '../http.service';
+import {HttpService} from '../services/http.service';
 import {IUser} from '../shared/model/user';
 import {MatSnackBar} from '@angular/material';
 
