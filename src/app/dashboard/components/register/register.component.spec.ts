@@ -17,8 +17,7 @@ describe('Component: RegisterComponent', () => {
         {
           provide: RegisterationController,
           useValue: {
-            register: () => {
-            }
+            register: jest.fn()
           }
         }
       ]
@@ -29,6 +28,13 @@ describe('Component: RegisterComponent', () => {
   });
   it('should have a defined component', () => {
     expect(component).toBeDefined();
+  });
+  it('das', () => {
+    const spy = jest.spyOn(component, 'addSports');
+    component.selectedSports = [];
+    component.addSports('nai');
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(component.selectedSports.length).toEqual(1);
   });
 
 });
