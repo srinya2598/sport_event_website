@@ -5,7 +5,7 @@ import {MatSnackBar} from '@angular/material';
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterationController {
+export class AppController {
   private successMessage = 'You have been Successfully Registered!';
   private errorMessage = 'Something went wrong. Please, try again!';
 

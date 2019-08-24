@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CommonUtils} from '../../../shared/utils/common.utils';
 import {ValidatorsUtils} from '../../../shared/utils/validators';
-import {RegisterationController} from '../../../controller/registeration.controller';
+import {AppController} from '../../../controller/app.controller';
 import * as $ from 'jquery';
 
 @Component({
@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
   CommonUtil = CommonUtils;
 
 //register,addsports,removesports unit test
-  constructor(private registrationController: RegisterationController,
+  constructor(private registrationController: AppController,
   ) {
     this.branches = CommonUtils.getBranches();
     this.years = CommonUtils.getYear();

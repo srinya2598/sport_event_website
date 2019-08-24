@@ -19,10 +19,8 @@ export class HomeComponent implements OnInit {
   };
   dialogRef: MatDialogRef<MedaltallyComponent>;
 
-  constructor(private dialog: MatDialog, private route: Router, private httpService: HttpService) {
-    this.httpService.getFacebookPosts().subscribe((res) => {
-      console.log(res);
-    }, (err) => console.log(err));
+  constructor(private dialog: MatDialog, private route: Router) {
+
   }
 
 // facebook, medal method unit test

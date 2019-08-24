@@ -1,14 +1,14 @@
 import {RegisterComponent} from './register.component';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {RegisterationController} from '../../../controller/registeration.controller';
+import {AppController} from '../../../controller/app.controller';
 import {MaterialModule} from '../../../../materal.module';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
 describe('Component: RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
-  let registrationController: RegisterationController;
+  let registrationController: AppController;
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [MaterialModule, ReactiveFormsModule],
@@ -16,7 +16,7 @@ describe('Component: RegisterComponent', () => {
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [
         {
-          provide: RegisterationController,
+          provide: AppController,
           useValue: {
             register: jest.fn()
           }
@@ -25,7 +25,7 @@ describe('Component: RegisterComponent', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
-    registrationController = TestBed.get(RegisterationController);
+    registrationController = TestBed.get(AppController);
 
   });
   it('should have a defined component', () => {
