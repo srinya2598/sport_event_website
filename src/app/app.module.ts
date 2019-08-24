@@ -6,17 +6,7 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './dashboard/components/home/home.component';
 import {RegisterComponent} from './dashboard/components/register/register.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {
-  MatAutocompleteModule,
-  MatCardModule,
-  MatChipsModule,
-  MatFormFieldModule,
-  MatIconModule,
-  MatInputModule,
-  MatMenuModule,
-  MatDialogModule,
-  MatSelectModule, MatSnackBarModule, MatTableModule
-} from '@angular/material';
+
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxCaptchaModule} from 'ngx-captcha';
@@ -28,6 +18,7 @@ import {FacebookComponent} from './dashboard/components/facebook/facebook.compon
 import {FacebookCardComponent} from './dashboard/components/facebook-card/facebook-card.component';
 import {NavbarComponent} from './dashboard/components/navbar/navbar.component';
 import {TeamComponent} from './dashboard/components/team/team.component';
+import { MaterialModule } from '../materal.module';
 
 @NgModule({
   declarations: [
@@ -42,25 +33,15 @@ import {TeamComponent} from './dashboard/components/team/team.component';
     TeamComponent
   ],
   imports: [
+    MaterialModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatChipsModule,
-    MatAutocompleteModule,
-    MatSnackBarModule,
     NgxCaptchaModule,
     CountUpModule,
-    FlexLayoutModule,
-    MatDialogModule,
-    MatMenuModule,
-    MatTableModule
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
