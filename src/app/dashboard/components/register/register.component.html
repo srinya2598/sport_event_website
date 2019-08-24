@@ -22,38 +22,38 @@
         <div class="col-md-6">
           <div class="form">
             <form [formGroup]="formGroup" (ngSubmit)="formGroup.valid&&register()" autocomplete="off">
-              <mat-form-field style="width: 90% !important;" >
+              <mat-form-field >
                 <input matInput placeholder="Name" formControlName="name" autocomplete="false">
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field >
                 <input matInput placeholder="Contact Number" formControlName="contact_number">
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field >
                 <input matInput placeholder="Student Number" formControlName="student_number">
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field >
                 <input matInput placeholder="Email" formControlName="email">
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field >
                 <mat-select matInput placeholder="Branch" formControlName="branch">
                   <mat-option *ngFor="let branch of branches"
                               [value]="branch">{{CommonUtil.getBranchTitle(branch)}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field>
                 <mat-select matInput placeholder="Year" formControlName="year">
                   <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
                 </mat-select>
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field >
                 <mat-select matInput placeholder="Gender" formControlName="gender">
                   <mat-option *ngFor="let gender of genders"
                               [value]="gender">{{CommonUtil.getGenderTitle(gender)}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field >
                 <mat-chip-list #chipList>
                   <mat-chip *ngFor="let sport of selectedSports" [selectable]="true" [removable]="true"
                             (removed)="removeSports(sport) ">{{sport}}
@@ -68,7 +68,7 @@
                   </mat-option>
                 </mat-autocomplete>
               </mat-form-field>
-              <mat-form-field style="width: 90% !important;">
+              <mat-form-field>
                 <mat-select matInput placeholder="Residence" formControlName="residence">
                   <mat-option *ngFor="let residence of residences"
                               [value]="residence">{{CommonUtil.getResidenceTitle(residence)}}
