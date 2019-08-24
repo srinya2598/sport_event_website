@@ -35,4 +35,9 @@ export class AppController {
       });
     console.log(userData);
   }
+  getFacebookPost(){
+    return this.httpService.getFacebookPosts();
+  }
+
+
 }

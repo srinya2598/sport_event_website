@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {IPost} from '../../../shared/model/post';
+import {AppController} from '../../../controller/app.controller';
 
 @Component({
   selector: 'app-facebook',
@@ -6,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./facebook.component.scss']
 })
 export class FacebookComponent implements OnInit {
+  posts: IPost[];
 
-  constructor() { }
+  constructor(private appController: AppController) {
+    this.posts = [];
+  }
 
   ngOnInit() {
+    this.getFaceBookPost();
+  }
+
+  getFaceBookPost() {
+    this.appController.getFacebookPost().subscribe((res) => {
+      this.posts = res['data'];
+      console.log(this.posts);
+    });
   }
 }

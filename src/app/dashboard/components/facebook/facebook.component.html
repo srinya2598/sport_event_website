@@ -1,1 +1,5 @@
-<app-facebook-card></app-facebook-card>
+<div fxLayout="row">
+<ng-container *ngFor="let post of posts">
+<app-facebook-card [post]="post" ></app-facebook-card>
+</ng-container>
+</div>
