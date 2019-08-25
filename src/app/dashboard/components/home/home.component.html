@@ -22,8 +22,8 @@
         <img src="assets/banner/back_particles.png" alt="particles" class="ls-l" style="z-index:3; left:50%;" data-ls="offsetxin: left; offsetxout:left; scalein:90; easingin: easeoutquart; durationin: 3000; delayin: 250;">
         <h2 class="ls-l bannertext layercontent03" data-ls="offsetxin:left; rotatexin:90 ; durationin: 3500;">Saksham</h2>
         <h2 class="ls-l bannertext01 italic01 layercontent04" data-ls="offsetxin:left; scalexin:9; durationin: 4000;">2019</h2>
-        <button class="ls-l bannertext02 layercontent05" data-ls="offsetxin:left; rotatexin:90 ; durationin: 4500;"(click)="scrollToSection('register')">
-          Register
+        <button class="ls-l bannertext02 layercontent05" data-ls="offsetxin:left; rotatexin:90 ; durationin: 4500;"(click)="voting()">
+          Voting
         </button>
       </div>
     </div>
@@ -33,12 +33,14 @@
 <div class="rest">
   <app-carousel></app-carousel>
   <div class="container-fluid">
-    <div class="row overview">
+    <div class="row overview text-center">
       <div class="col-md-12">
         <div class="overview-header text-center">
-          <h1><span style="color: #ee7700">THRIVE TO BE THE</span> BEST</h1>
+          <h1><span style="color: #ed7737">THRIVE TO BE THE</span> BEST</h1>
         </div>
       </div>
+    </div>
+    <div class="row">
       <div class="col-md-3">
         <div class="overview_matches text-center">
           <div class="spinner">
@@ -107,7 +109,7 @@
 
   <app-register id="register"></app-register>
 
-  <div class="container-fluid" id="team" style="background-color: #000000;">
+  <div class="container-fluid" id="team" style="background-image: url('/assets/blackbg.jpg'); background-repeat: no-repeat; background-size: cover">
     <div class="row">
       <div class="col-md-12 text-center">
         <div class="team-header"><h1>THE <span style="color: #ee7700"> TEAM</span></h1></div>
@@ -164,7 +166,7 @@
     </div>
   </div>
 
-  <div class="container-fluid profile-container" id="contact" style="background-color: black;">
+  <div class="container-fluid" id="contact" style="background-color: black;">
     <div class="profile-container">
       <div class="area" style="z-index:99">
         <ul class="circles">
@@ -212,9 +214,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="footer text-center">
-            <p><a href="https://teamconatus.com/" target="_blank" style="text-decoration: none;color:white">Powered by TEAM CONATUS</a></p>
+            <p><a href="https://teamconatus.com/" target="_blank">Powered by TEAM CONATUS</a></p>
           </div>
         </div>
       </div>
-    </div>
+
   </div>
+</div>
+</div>
