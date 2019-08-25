@@ -7,9 +7,9 @@ let ELEMENT_DATA: IMedal[] = [
   {branch: 'IT', bronze: '0', silver: '0', gold: '0', total: '0'},
   {branch: 'ECE', bronze: '0', silver: '0', gold: '0', total: '0'},
   {branch: 'ME', bronze: '0', silver: '0', gold: '0', total: '0'},
-  {branch: 'CE + EI', bronze: '0', silver: '0', gold: '0', total: '0'},
+  {branch: 'CE _ EI', bronze: '0', silver: '0', gold: '0', total: '0'},
   {branch: 'EN', bronze: '0', silver: '0', gold: '0', total: '0'},
-  {branch: 'MBA + MCA', bronze: '0', silver: '0', gold: '0', total: '0'},
+  {branch: 'MBA _ MCA', bronze: '0', silver: '0', gold: '0', total: '0'},
 ];
 
 @Component({
