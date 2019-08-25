@@ -22,6 +22,7 @@ import { MaterialModule } from '../materal.module';
 import { CarouselComponent } from './dashboard/components/carousel/carousel.component';
 import { CarouselCardComponent } from './dashboard/components/carousel-card/carousel-card.component';
 import { ParticlesModule } from 'angular-particle';
+import { VotingComponent } from './dashboard/components/voting/voting.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ParticlesModule } from 'angular-particle';
     NavbarComponent,
     TeamComponent,
     CarouselComponent,
-    CarouselCardComponent
+    CarouselCardComponent,
+    VotingComponent
   ],
   imports: [
     MaterialModule,
@@ -52,7 +54,8 @@ import { ParticlesModule } from 'angular-particle';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [MedaltallyComponent]
+  entryComponents: [MedaltallyComponent,
+  VotingComponent]
 })
 export class AppModule {
 }

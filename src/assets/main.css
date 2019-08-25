@@ -1278,6 +1278,7 @@ h6 {
     background: #b81e20;
     color: white;
     position: relative;
+    width: 10%;
     font-style: italic;
     padding: 13px 20px;
     font-family: daggersquare;
@@ -1324,10 +1325,10 @@ h6 {
   }
   .layercontent01 {
     left: 0% !important;
-    top: 450px !important;
+    top: 550px !important;
   }
   .layercontent02{
-    top:100px;
+    top:200px;
     left:300px;
     width:10%;
     z-index:99;
@@ -1363,7 +1364,7 @@ h6 {
 
 .layercontent01 {
   left: 0% !important;
-  top: 150px !important;
+  top: 250px !important;
   margin-top: -120px !important;
 }
 
@@ -1397,19 +1398,19 @@ h6 {
 @media screen and (min-width: 1200px) {
   .layercontent01 {
     left: 10% !important;
-    top: 150px !important; }
+    top: 200px !important; }
   .layercontent02 {
     left: 65% !important;
-    top: 180px !important; }
+    top: 170px !important; }
   .layercontent03 {
     left: 55% !important;
-    top: 320px !important; }
+    top: 370px !important; }
   .layercontent04 {
     left: 61.8% !important;
-    top: 450px !important; }
+    top: 500px !important; }
   .layercontent05 {
     left: 80% !important;
-    top: 500px !important; }
+    top: 530px !important; }
   .layercontent06 {
     left: 72% !important;
     top: 750px !important; }
@@ -1420,4 +1421,4 @@ h6 {
 @media screen and (min-width: 1500px) {
   .layercontent01 {
     left: 25% !important;
-    top: 150px !important; } }
+    top: 200px !important; } }

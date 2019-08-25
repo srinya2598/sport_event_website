@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material';
-import {MedaltallyComponent} from '../medaltally/medaltally.component';
-import {CommonUtils} from '../../../shared/utils/common.utils';
-import Typed from 'typed.js';
-import {Router} from '@angular/router';
-import {IMedal} from '../../../shared/model/medal';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { MedaltallyComponent } from '../medaltally/medaltally.component';
+import { CommonUtils } from '../../../shared/utils/common.utils';
+import { Router } from '@angular/router';
+import { IMedal } from '../../../shared/model/medal';
+import { VotingComponent } from '../voting/voting.component';
 
 
 @Component({
@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   };
   dialogRef: MatDialogRef<MedaltallyComponent>;
   medals: IMedal[];
+  dialogRefVoting: MatDialogRef<VotingComponent>;
 
   constructor(private dialog: MatDialog, private route: Router) {
 
@@ -52,6 +53,19 @@ export class HomeComponent implements OnInit {
       dialogConfig.width = '95%';
     }
     this.dialogRef = this.dialog.open(MedaltallyComponent, dialogConfig);
+
+  }
+
+  voting() {
+
+    let dialogConfig = {
+      width: '40%',
+      height: '90%'
+    };
+    if (CommonUtils.isOnMobile()) {
+      dialogConfig.width = '95%';
+    }
+    this.dialogRefVoting = this.dialog.open(VotingComponent, dialogConfig);
 
   }
 
