@@ -97,7 +97,7 @@ export class CommonUtils {
     return residenceTitle;
   }
 
-  static getSportsTitle(sport: ISportCategory) {
+  static getSportsTitle(sport) {
     let sportTitle;
     switch (sport) {
       case ISportCategory.ATHLETICS:
@@ -156,7 +156,7 @@ export class CommonUtils {
 
   }
 
-  static getSportIcon(sport: ISportCategory) {
+  static getSportIcon(sport) {
     let sportIcon;
     switch (sport) {
       case ISportCategory.ATHLETICS:
