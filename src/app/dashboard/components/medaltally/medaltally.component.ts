@@ -42,7 +42,7 @@ export class MedaltallyComponent implements OnInit {
     this.appController.getmedalTally().subscribe(res => {
       console.log(res['data']);
       if (res) {
-        ELEMENT_DATA = res.data;
+        this.dataSource = res.data;
 
       }
     });
