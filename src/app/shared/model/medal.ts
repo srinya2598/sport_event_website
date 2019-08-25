@@ -3,5 +3,6 @@ export interface IMedal {
   bronze: string;
   silver: string;
   gold: string;
+  total: string;
 }
 

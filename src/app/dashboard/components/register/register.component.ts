@@ -98,7 +98,7 @@ export class RegisterComponent implements OnInit {
 
       const value = {
         ...this.formGroup.value,
-        sports: this.selectedSports
+        sport: this.selectedSports
       };
       this.registrationController.register(value);
       this.selectedSports = [];

@@ -155,4 +155,12 @@ export class CommonUtils {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
   }
+
+  static getSportIcon(sport: ISportCategory){
+let sportIcon;
+switch (sport) {
+  case ISportCategory.ATHLETICS:
+    sportIcon
+}
+  }
 }

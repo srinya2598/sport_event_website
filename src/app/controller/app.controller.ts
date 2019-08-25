@@ -24,7 +24,9 @@ export class AppController {
     }
     this.httpService.post('/register', userData).subscribe((res) => {
         console.log('success', res);
-        this.snackBar.open(this.successMessage
+        this.snackBar.open(this.successMessage, null, {
+            duration: 5000
+          }
         );
       },
       (e) => {

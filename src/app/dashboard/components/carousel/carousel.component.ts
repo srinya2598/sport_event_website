@@ -20,7 +20,7 @@ export class CarouselComponent implements OnInit {
   }
 
   getSchedule() {
-    this.appController.getSchedule().subscribe(res => {
+    this.appController.getSchedule().subscribe((res: { data: ISchedule[] }) => {
       console.log(res['data']);
       this.schedules = res.data;
 

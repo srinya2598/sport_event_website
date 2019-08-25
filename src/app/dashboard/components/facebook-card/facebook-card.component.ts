@@ -22,5 +22,4 @@ export class FacebookCardComponent implements OnInit {
     this.sportName = this.post.sportName;
     this.date = this.post.date;
   }
-
 }
