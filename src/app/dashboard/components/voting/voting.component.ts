@@ -14,8 +14,8 @@ export class VotingComponent implements OnInit {
   branch: FormControl;
   branches: string[];
   CommonUtil = CommonUtils;
-  public pieChartLabels = [];
-  public pieChartData = [];
+  public pieChartLabels = ['CSE', 'IT', 'EC'];
+  public pieChartData = [150, 100, 50];
   public pieChartType = 'pie';
 
   constructor(private appController: AppController) {
