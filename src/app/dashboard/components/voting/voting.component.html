@@ -2,7 +2,7 @@
   <h1 class="header__name">VOTING</h1>
   <div class="form">
     <form [formGroup]="formGroup" (ngSubmit)="formGroup.valid&&vote()" autocomplete="off">
-      <mat-form-field class="formfield" style="width: 100%">
+      <mat-form-field class="formfield" >
         <mat-select matInput placeholder="Branch" formControlName="branch">
           <mat-option *ngFor="let branch of branches"
                       [value]="branch">{{CommonUtil.getBranchTitle(branch)}}

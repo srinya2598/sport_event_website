@@ -59,4 +59,22 @@ describe('AppController', () => {
     controller.getSchedule();
     expect(httpService.get).toHaveBeenCalledTimes(1);
   });
+  it(' getVotes:should call get method once', () => {
+    controller.getVotes();
+    expect(httpService.get).toHaveBeenCalledTimes(1);
+  });
+  describe('submitVote', () => {
+    let spy;
+    beforeEach(() => {
+      spy = jest.spyOn(controller, 'submitVote');
+    });
+    it('should call post of httpService once and with correct data', () => {
+      const data = {
+        branch: 'cse'
+      };
+      controller.submitVote(data);
+      expect(httpService.post).toHaveBeenCalledTimes(1);
+      expect(httpService.post).toHaveBeenCalledWith('/poll', data);
+    });
+  });
 });

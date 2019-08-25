@@ -54,11 +54,11 @@ export class AppController {
     return this.httpService.get('/poll');
   }
 
-  sumbitVote(branch) {
+  submitVote(branch) {
     if (!branch) {
       return;
     }
-    this.httpService.post('/poll').subscribe(res => {
+    this.httpService.post('/poll', branch).subscribe(res => {
         this.snackBar.open('Your vote has been registered', null, {
           duration: 5000
         });

@@ -23,7 +23,7 @@ export class VotingComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.branch = new FormControl(null);
+    this.branch = new FormControl(null, [Validators.required]);
     this.formGroup = new FormGroup({
       'branch': this.branch,
     });
@@ -36,7 +36,7 @@ export class VotingComponent implements OnInit {
         if (res) {
           Object.keys(res).forEach(key => {
             this.pieChartLabels.push(key);
-            this.pieChartData.push(res[key]);
+            this.pieChartData.push(+res[key]);
           });
         }
       }
@@ -44,7 +44,7 @@ export class VotingComponent implements OnInit {
   }
 
   vote() {
-    this.appController.sumbitVote(this.formGroup);
+    this.appController.submitVote(this.formGroup);
     this.formGroup.reset();
     this.formGroup.markAsPristine();
 
