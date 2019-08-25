@@ -23,6 +23,7 @@ import { CarouselComponent } from './dashboard/components/carousel/carousel.comp
 import { CarouselCardComponent } from './dashboard/components/carousel-card/carousel-card.component';
 import { ParticlesModule } from 'angular-particle';
 import { VotingComponent } from './dashboard/components/voting/voting.component';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { VotingComponent } from './dashboard/components/voting/voting.component'
     CountUpModule,
     FlexLayoutModule,
     RoundProgressModule,
-    ParticlesModule
+    ParticlesModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

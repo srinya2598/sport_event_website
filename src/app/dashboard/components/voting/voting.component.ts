@@ -13,12 +13,16 @@ export class VotingComponent implements OnInit {
   branch: FormControl;
   branches: string[];
   CommonUtil = CommonUtils;
+  public pieChartLabels = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
+  public pieChartData = [120, 150, 180, 90];
+  public pieChartType = 'pie';
+
   constructor() {
     this.branches = CommonUtils.getBranches();
   }
 
   ngOnInit() {
-    this.branch = new FormControl(null,[Validators.required]);
+    this.branch = new FormControl(null);
     this.formGroup = new FormGroup({
       'branch': this.branch,
     });
