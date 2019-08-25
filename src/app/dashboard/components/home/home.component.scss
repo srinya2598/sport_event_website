@@ -67,50 +67,58 @@
       .overview-header {
         padding-top: 15%;
       }
-      .spinner {
-        margin: auto;
-      }
+
     }
-
-  }
-
-  .overview {
-    //padding-top: 5%;
-    //padding-bottom: 5%;
-    //padding-left: 5%;
     .spinner {
-      position: relative;
+      margin: auto;
     }
     .count1{
       position: absolute;
-      left: 12%;
-      top:30%;
-      text-align: center;
+      top:25%;
+      left:11% !important;
     }
     .count2{
       position: absolute;
-      left: 4.5%;
-      top:30%;
-      text-align: center;
+      top:25%;
+      left:5% !important;
     }
     .count3{
       position: absolute;
-      left: 15%;
-      top:30%;
-      text-align: center;
+      top:25%;
+      left:15% !important;
     }
     .count4{
       position: absolute;
-      left: 11%;
-      top:30%;
-      text-align: center;
-    }
-    .overview_matches {
-      padding-bottom: 5%;
-      padding-top: 5vh;
-      font-family: Bahnschrift;
+      top:25%;
+      left:8% !important;
     }
 
+  }
+  .spinner {
+      position: relative;
+    padding-bottom: 20%;
+    }
+  .count1{
+     position: absolute;
+    top:25%;
+    left:15%;
+    }
+    .count2{
+      position: absolute;
+      top:25%;
+      left:6%;
+    }
+    .count3{
+      position: absolute;
+      top:25%;
+      left:20%;
+    }
+    .count4{
+      position: absolute;
+      top:25%;
+      left:14%;
+    }
+  .overview {
     .overview-header {
       padding-bottom: 5%;
       font-family: Bahnschrift;
@@ -170,6 +178,11 @@
   .footer {
     color: white;
     padding: 1%;
+    img {
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+    }
   }
 
   .responsive {
@@ -179,14 +192,15 @@
 
   .team-header {
     margin-top: 50px;
-    margin-bottom: 100px;
-    font-family: Bahnschrift;
+    margin-bottom: 50px;
     color: #FFFFFF;
+    h1 {
+      font-family: Bahnschrift;
+      font-size: 30px !important;
+    }
   }
 
   .profile-container {
-    //margin: 0 auto;
-    //padding-bottom: 50px;
     font-family: Bahnschrift;
   }
 
@@ -222,7 +236,7 @@
 
     .button:hover {
 
-      background-color: #ffffff;
+      background-color: lightgray;
       color: black;
       border: 2px solid #000000;
     }
@@ -230,8 +244,15 @@
 
 
   .about {
-    background: url("/assets/bg.jpg");
-    font-size: 15px;
+    background-image: url("/assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      font-size: 30px !important;
+      font-family: Bahnschrift;
+      padding: 20px;
+    }
+
     .content {
       color: white;
       font-size: 20px;
@@ -396,14 +417,14 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    padding-left: 12%;
+    padding-left: 18%;
 
     .thumbex{
       margin: 10px 20px 30px;
       width: 100%;
-      min-width: 250px;
+      min-width: 200px;
       max-width: 435px;
-      height: 250px;
+      height: 200px;
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
@@ -415,8 +436,8 @@
 
       .thumbnail{
         overflow: hidden;
-        min-width: 250px;
-        height: 250px;
+        min-width: 200px;
+        height: 200px;
         position: relative;
         opacity: 0.88;
         backface-visibility: hidden;
@@ -432,16 +453,18 @@
           width: auto;
           transform: translate(-50%, -50%);
           backface-visibility: hidden;
+          object-fit: cover;
+
         }
 
         span{
           position: absolute;
           z-index: 2;
-          top: calc(210px - 20px);
+          top: calc(170px - 20px);
           left: 0;
           right: 0;
           background: rgba(0,0,0,0.7);
-          padding: 10px 10px;
+          padding: 5px 5px;
           margin: 0 45px;
           text-align: center;
           font-size: 14px;
@@ -469,14 +492,14 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    padding-left: 20%;
+    padding-left: 26%;
 
     .thumbex{
       margin: 10px 20px 30px;
       width: 100%;
-      min-width: 250px;
+      min-width: 200px;
       max-width: 435px;
-      height: 250px;
+      height: 200px;
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
@@ -488,8 +511,8 @@
 
       .thumbnail{
         overflow: hidden;
-        min-width: 250px;
-        height: 250px;
+        min-width: 200px;
+        height: 200px;
         position: relative;
         opacity: 0.88;
         backface-visibility: hidden;
@@ -505,17 +528,19 @@
           width: auto;
           transform: translate(-50%, -50%);
           backface-visibility: hidden;
+          object-fit: cover;
+
         }
 
         span{
           position: absolute;
           z-index: 2;
-          top: calc(210px - 20px);
+          top: calc(170px - 20px);
           left: 0;
           right: 0;
           background: rgba(0,0,0,0.7);
-          padding: 10px 10px;
-          margin: 0 45px;
+          padding: 4px 4px;
+          margin: 0 30px;
           text-align: center;
           font-size: 14px;
           color: white;
