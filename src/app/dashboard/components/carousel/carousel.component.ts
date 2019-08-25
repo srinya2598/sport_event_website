@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ISchedule} from '../../../shared/model/schedule';
-import {Router} from '@angular/router';
 import {AppController} from '../../../controller/app.controller';
 
 @Component({
@@ -9,10 +8,10 @@ import {AppController} from '../../../controller/app.controller';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  schedules: ISchedule[];
+  schedules: ISchedule[] = [];
 
   constructor(private appController: AppController) {
-    this.schedules = [];
+
   }
 
   ngOnInit() {

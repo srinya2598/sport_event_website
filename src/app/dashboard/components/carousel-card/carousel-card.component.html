@@ -1,6 +1,6 @@
 <div class="card">
   <div class="row text-center">
-    <div class="col-md-12 text-center"><h3>{{sportName}}</h3></div>
+    <div class="col-md-12 text-center"><img [src]="CommonUtils.getSportIcon(sportName)" alt="{{sportName}}"></div>
   </div>
   <div class="row text-center">
     <div class="col-md-12">
@@ -9,7 +9,8 @@
     </div>
   </div>
   <div class="row text-center">
-    <div class="col-md-12" style="padding-bottom: 3vh"><b>VERSUS<br>{{venue}}</b></div>
+    <div class="col-md-12" style="padding-bottom: 3vh"><b>{{date}}<br>{{venue}}</b></div>
+    <div class="col-md-12" style="padding-bottom: 3vh"><b>{{timeStart}}<br>{{timeEnd}}</b></div>
   </div>
 </div>
 

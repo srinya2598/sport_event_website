@@ -8,14 +8,14 @@ import {AppController} from '../../../controller/app.controller';
   styleUrls: ['./facebook.component.scss']
 })
 export class FacebookComponent implements OnInit {
-  posts: IPost[];
+  posts: IPost[] = [];
   myStyle: object = {};
   myParams: object = {};
   width: number = 100;
   height: number = 100;
 
   constructor(private appController: AppController) {
-    this.posts = [];
+
   }
 
   ngOnInit() {

@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
 
   CommonUtil = CommonUtils;
 
-//register,addsports,removesports unit test
+
   constructor(private registrationController: AppController,
   ) {
     this.branches = CommonUtils.getBranches();
@@ -73,7 +73,7 @@ export class RegisterComponent implements OnInit {
     this.hosteler = new FormControl(null, [Validators.required]);
     this.recaptcha = new FormControl(null, [Validators.required]);
     this.formGroup = new FormGroup({
-      'fullName': this. fullName,
+      'fullName': this.fullName,
       'mobileNumber': this.mobileNumber,
       'studentNumber': this.studentNumber,
       'email': this.email,

@@ -1,5 +1,4 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {IMedal} from '../../../shared/model/medal';
 import {AppController} from '../../../controller/app.controller';
 
@@ -24,8 +23,8 @@ export class MedaltallyComponent implements OnInit {
 
   dataSource = ELEMENT_DATA;
 
-  constructor(public dialogRef: MatDialogRef<MedaltallyComponent>,
-              private appController: AppController
+  constructor(
+    private appController: AppController
   ) {
 
   }

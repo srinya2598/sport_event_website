@@ -1,4 +1,3 @@
-import {TypeCheckHost} from '@angular/compiler-cli/src/diagnostics/translate_diagnostics';
 
 export enum ISportCategory {
   CRICKET = 'cricket',
@@ -14,6 +13,6 @@ export enum ISportCategory {
   KHO_KHO = 'kho-kho',
   TUG_OF_WAR = 'tug_of_war',
   CHESS = 'chess',
-  CAROM = 'carom',
+  CARROM = 'carrom',
   OBSTACLE_RACE = 'obsatacle_race',
 }

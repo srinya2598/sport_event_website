@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ISchedule} from '../../../shared/model/schedule';
+import {CommonUtils} from '../../../shared/utils/common.utils';
 
 @Component({
   selector: 'app-carousel-card',
@@ -15,6 +16,7 @@ export class CarouselCardComponent implements OnInit {
   timeStart: string;
   timeEnd: string;
   venue: string;
+  CommonUtils = CommonUtils;
 
   constructor() {
   }

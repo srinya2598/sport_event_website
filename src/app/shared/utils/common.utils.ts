@@ -109,8 +109,8 @@ export class CommonUtils {
       case ISportCategory.BASKETBALL:
         sportTitle = 'Basketball';
         break;
-      case ISportCategory.CAROM:
-        sportTitle = 'Carom';
+      case ISportCategory.CARROM:
+        sportTitle = 'Carrom';
         break;
       case ISportCategory.CHESS:
         sportTitle = 'Chess';
@@ -156,11 +156,57 @@ export class CommonUtils {
 
   }
 
-  static getSportIcon(sport: ISportCategory){
-let sportIcon;
-switch (sport) {
-  case ISportCategory.ATHLETICS:
-    sportIcon
-}
+  static getSportIcon(sport: ISportCategory) {
+    let sportIcon;
+    switch (sport) {
+      case ISportCategory.ATHLETICS:
+        sportIcon = '/assets/images/atheletics.png';
+        break;
+      case ISportCategory.BADMINTON:
+        sportIcon = '/assets/images/badminton.png';
+        break;
+      case ISportCategory.BASKETBALL:
+        sportIcon = '/assets/images/basketball.png';
+        break;
+      case ISportCategory.CARROM:
+        sportIcon = '/assets/images/carrom.png';
+        break;
+      case ISportCategory.CHESS:
+        sportIcon = '/assets/images/chess.png';
+        break;
+      case ISportCategory.CRICKET:
+        sportIcon = '/assets/images/cricket.png';
+        break;
+      case ISportCategory.FOOTBALL:
+        sportIcon = '/assets/images/football.png';
+        break;
+      case ISportCategory.KABADDI:
+        sportIcon = '/assets/images/kabaddi.png';
+        break;
+      case ISportCategory.KHO_KHO:
+        sportIcon = '/assets/images/kho-kho.png';
+        break;
+      case ISportCategory.OBSTACLE_RACE:
+        sportIcon = '/assets/images/obstacle_race.png';
+        break;
+      case ISportCategory.POOL:
+        sportIcon = '/assets/images/pool.png';
+        break;
+      case ISportCategory.POWER_LIFTING:
+        sportIcon = '/assets/images/power_lifting.png';
+        break;
+      case ISportCategory.TABLE_TENNIS:
+        sportIcon = '/assets/images/table_tennis.png';
+        break;
+      case ISportCategory.TUG_OF_WAR:
+        sportIcon = '/assets/images/tug_of_war.png';
+        break;
+      case ISportCategory.VOLLEYBALL:
+        sportIcon = '/assets/images/volleyball.png';
+        break;
+      default:
+        sportIcon = '';
+    }
+    return sportIcon;
   }
 }
