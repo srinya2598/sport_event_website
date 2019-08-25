@@ -1,7 +1,7 @@
 export interface IMedal {
   branch: string;
-  bronze: number;
-  silver: number;
-  gold: number;
+  bronze: string;
+  silver: string;
+  gold: string;
 }
 
