@@ -16,7 +16,6 @@ export class AppController {
 
   }
 
-//register method unit test
   register(userData) {
     if (!userData) {
       console.log('user data no available');
@@ -50,5 +49,24 @@ export class AppController {
   getSchedule() {
     return this.httpService.get('/schedules');
   }
+
+  getVotes() {
+    return this.httpService.get('/poll');
+  }
+
+  sumbitVote(branch) {
+    if (!branch) {
+      return;
+    }
+    this.httpService.post('/poll').subscribe(res => {
+        this.snackBar.open('Your vote has been registered', null, {
+          duration: 5000
+        });
+      },
+      (error) => {
+        console.log(error);
+      });
+  }
+
 
 }

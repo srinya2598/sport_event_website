@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {CommonUtils} from '../../../shared/utils/common.utils';
 import {MaterialModule} from '../../../../materal.module';
+import {AppController} from '../../../controller/app.controller';
 
 @Component({
   selector: 'app-voting',
@@ -13,11 +14,11 @@ export class VotingComponent implements OnInit {
   branch: FormControl;
   branches: string[];
   CommonUtil = CommonUtils;
-  public pieChartLabels = ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'];
-  public pieChartData = [120, 150, 180, 90];
+  public pieChartLabels = [];
+  public pieChartData = [];
   public pieChartType = 'pie';
 
-  constructor() {
+  constructor(private appController: AppController) {
     this.branches = CommonUtils.getBranches();
   }
 
@@ -26,9 +27,26 @@ export class VotingComponent implements OnInit {
     this.formGroup = new FormGroup({
       'branch': this.branch,
     });
+
+    this.getVotes();
+  }
+
+  getVotes() {
+    this.appController.getVotes().subscribe(res => {
+        if (res) {
+          Object.keys(res).forEach(key => {
+            this.pieChartLabels.push(key);
+            this.pieChartData.push(res[key]);
+          });
+        }
+      }
+    );
   }
 
   vote() {
+    this.appController.sumbitVote(this.formGroup);
+    this.formGroup.reset();
+    this.formGroup.markAsPristine();
 
   }
 
