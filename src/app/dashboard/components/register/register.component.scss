@@ -7,6 +7,7 @@
   border-radius: 10px;
   overflow: hidden;
   transition: all .5s;
+  font-family: daggersquare;
 }
 
 .button3:hover {
@@ -123,6 +124,11 @@
   border-radius: 20px !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #ffffff !important;
+}
+
+@font-face {
+  font-family: daggersquare;
+  src: url("/assets/do.otf");
 }
 
 

@@ -16,17 +16,18 @@
 
 button {
   padding: 10px;
-  width: 40%;
-  border-radius: 7%;
+  width: 30%;
+  //border-radius: 7%;
   background-color: #B81E20;
-  //align-items: center;
+  color: white;
+  font-size: 15px !important;
+  font-family: daggersquare;
 }
 
 .button {
   text-align: center;
   font-style: italic;
-  color: white;
-  font-size: 20px !important;
+
 }
 
 .formfield {
@@ -39,3 +40,7 @@ button {
   }
 }
 
+@font-face {
+  font-family: daggersquare;
+  src: url("/assets/do.otf");
+}

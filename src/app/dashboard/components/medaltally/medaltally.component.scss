@@ -42,6 +42,16 @@ table {
 }
 
 .medalimage {
-  height: 8%;
+  height: 5%;
   width: 65%;
+}
+
+@media(max-width: 767px) {
+  .medalimage {
+    height: 3%;
+    width: 70%;
+  }
+  h3 {
+    font-size: 10px !important;
+  }
 }
