@@ -455,6 +455,9 @@ button {
   flex-direction: row;
   justify-content: center;
   padding-left: 18%;
+  @media screen and (max-width: 786px) {
+    padding-left: 0;
+  }
 
   .thumbex {
     margin: 10px 20px 30px;
@@ -531,7 +534,9 @@ button {
   flex-direction: row;
   justify-content: center;
   padding-left: 26%;
-
+  @media screen and (max-width: 786px) {
+    padding-left: 0;
+  }
   .thumbex {
     margin: 10px 20px 30px;
     width: 100%;
