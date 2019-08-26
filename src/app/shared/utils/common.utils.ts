@@ -178,10 +178,10 @@ export class CommonUtils {
         sportIcon = '/assets/images/cricket.png';
         break;
       case ISportCategory.FOOTBALL:
-        sportIcon = '/assets/images/football.png';
+        sportIcon = '/assets/images/football.PNG';
         break;
       case ISportCategory.KABADDI:
-        sportIcon = '/assets/images/kabaddi.png';
+        sportIcon = '/assets/images/kabaddi.PNG';
         break;
       case ISportCategory.KHO_KHO:
         sportIcon = '/assets/images/kho-kho.png';
@@ -196,13 +196,13 @@ export class CommonUtils {
         sportIcon = '/assets/images/power_lifting.png';
         break;
       case ISportCategory.TABLE_TENNIS:
-        sportIcon = '/assets/images/table_tennis.png';
+        sportIcon = '/assets/images/table_tennis.PNG';
         break;
       case ISportCategory.TUG_OF_WAR:
         sportIcon = '/assets/images/tug_of_war.png';
         break;
       case ISportCategory.VOLLEYBALL:
-        sportIcon = '/assets/images/volleyball.png';
+        sportIcon = '/assets/images/volleyball.PNG';
         break;
       default:
         sportIcon = '';
