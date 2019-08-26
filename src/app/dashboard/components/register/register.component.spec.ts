@@ -83,7 +83,7 @@ describe('Component: RegisterComponent', () => {
       component.register();
       expect(registrationController.register).toHaveBeenCalledWith({
         name: 'someDummyName',
-        sports: sport
+        sport: sport
       });
 
     });
